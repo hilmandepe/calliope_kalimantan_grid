@@ -1,0 +1,22 @@
+techs:
+
+  diesel:
+    essentials:
+        name: 'Diesel power generator'
+        color: '#6D37AD'
+        parent: supply
+        carrier_out: power
+    constraints:
+        resource: inf
+        energy_eff: 0.25
+        energy_cap_max: 40000  # kW
+        energy_cap_max_systemwide: 100000  # kW
+        energy_ramping: 2.4
+        lifetime: 25
+    costs:
+        monetary:
+            interest_rate: 0.10
+            energy_cap: 0.00120  # USD per kW
+            om_con: 0.00300  # USD per kWh
+        co2:
+            om_prod: # kg CO2eq/kWh

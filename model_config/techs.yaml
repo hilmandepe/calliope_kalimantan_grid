@@ -1,0 +1,80 @@
+import:
+    - techs/biomass.yaml
+    - techs/ccgt.yaml
+    - techs/coal.yaml
+    - techs/diesel.yaml
+    - techs/geothermal.yaml
+    - techs/hydro.yaml
+    - techs/solar.yaml
+    - techs/wind_offshore.yaml
+    - techs/wind_onshore.yaml
+
+techs:
+    ##
+    # Storage
+    ##
+    # battery-start
+    battery:
+        essentials:
+            name: 'Battery storage'
+            color: '#3B61E3'
+            parent: storage
+            carrier: power
+        constraints:
+            energy_cap_max: 1000  # kW
+            storage_cap_max: inf
+            energy_cap_per_storage_cap_max: 4
+            energy_eff: 0.95  # 0.95 * 0.95 = 0.9025 round trip efficiency
+            storage_loss: 0  # No loss over time assumed
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                storage_cap: 0.2  # USD per kWh storage capacity
+    # battery-end
+
+    ##
+    # Demand
+    ##
+    # demand-start
+    demand_power:
+        essentials:
+            name: 'Power demand'
+            color: '#072486'
+            parent: demand
+            carrier: power
+    # demand-end
+
+    ##
+    # Transmission
+    ##
+
+    # transmission-start
+    ac_transmission:
+        essentials:
+            name: 'AC power transmission'
+            color: '#8465A9'
+            parent: transmission
+            carrier: power
+        constraints:
+            energy_eff: 0.85
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 2.0
+                om_prod: 0.002
+
+    free_transmission:
+        essentials:
+            name: 'Local power transmission'
+            color: '#6783E3'
+            parent: transmission
+            carrier: power
+        constraints:
+            energy_cap_max: inf
+            energy_eff: 1.0
+        costs:
+            monetary:
+                om_prod: 0
+    # transmission-end
