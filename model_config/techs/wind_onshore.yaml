@@ -7,23 +7,19 @@ techs:
         parent: supply_plus
         carrier_out: power
     constraints:
-        storage_cap_max: 614033
-        energy_cap_per_storage_cap_max: 1
-        storage_loss: 0.002
         resource: file=wind_onshore_resource.csv
         resource_unit: energy_per_area
         energy_eff: 1
-        parasitic_eff: 0.9
         resource_area_max: inf
         energy_cap_max: 0 # Overridden in locations
         lifetime: 25
     costs:
       monetary:
-           interest_rate: 0.10
-           storage_cap: 50
-           resource_area: 200
-           resource_cap: 200
-           energy_cap: 0.00188 # USD per kWh
-           om_prod: 0.00001 # USD per kWh
+         interest_rate: 0.10
+         storage_cap: 50
+         resource_area: 200
+         resource_cap: 200
+         energy_cap: 0.00188 # USD per kWh
+         om_con: 0.00001 # USD per kWh
       co2:
-            om_prod: 0.0078 # kg CO2eq/kWh
+         om_prod: 0.0078 # kg CO2eq/kWh

@@ -1,0 +1,20 @@
+techs:
+
+    battery:
+        essentials:
+            name: 'Li-ion battery storage'
+            color: '#3B61E3'
+            parent: storage
+            carrier: power
+        constraints:
+            energy_cap_max: 1000  # kW
+            storage_cap_max: inf
+            energy_cap_per_storage_cap_max: 4
+            energy_eff: 0.95  # 0.95 * 0.95 = 0.9025 round trip efficiency
+            storage_loss: 0  # No loss over time assumed
+            lifetime: 15
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 13.9 # USD per kW
+                storage_cap: 0.2  # USD per kWh storage capacity

@@ -10,13 +10,12 @@ techs:
         resource: inf
         energy_eff: 1
         energy_cap_max: 40000  # kW
-        energy_cap_max_systemwide: 100000  # kW
         energy_ramping: 2.4
         lifetime: 30
     costs:
         monetary:
             interest_rate: 0.10
             energy_cap: 0.00450  # USD per kW
-            om_con: 0.00050  # USD per kWh
+            om_con: 0.00050 # USD per kWh
         co2:
-            om_prod: 0.038 # kg CO2eq/kWh
+            om_prod: 0.038 # kgCO2eq/kWh
