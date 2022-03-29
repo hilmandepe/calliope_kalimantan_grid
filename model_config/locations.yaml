@@ -10,9 +10,15 @@ locations:
             demand_power:
                 constraints:
                     resource: file=demand-1.csv:demand
-            ccgt:
+            diesel:
                 constraints:
-                    energy_cap_max: 3000 # increased to ensure no unmet_demand in first timestep
+                    energy_cap_max: 133.297 #MW
+            coal:
+                constraints:
+                    energy_cap_max: 250.0 #MW
+            biomass:
+                constraints:
+                    energy_cap_max: 10.0 #MW
 
     region2:
         coordinates: {lat: 0.1093, lon: 110.5921}
@@ -20,9 +26,18 @@ locations:
             demand_power:
                 constraints:
                     resource: file=demand-2.csv:demand
-            ccgt:
+            biomass:
                 constraints:
-                    energy_cap_max: 3000 # increased to ensure no unmet_demand in first timestep
+                    energy_cap_max: 3.5 #MW
+            coal:
+                constraints:
+                    energy_cap_max: 186.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_max: 112.093 #MW
+            hydro:
+                constraints:
+                    energy_cap_max: 92.025 #MW
             battery:
 
     region3:
@@ -31,9 +46,12 @@ locations:
             demand_power:
                 constraints:
                     resource: file=demand-3.csv:demand
-            ccgt:
+            biomass:
                 constraints:
-                    energy_cap_max: 3000 # increased to ensure no unmet_demand in first timestep
+                    energy_cap_max: 5.0 # MW
+            diesel:
+                constraints:
+                    energy_cap_max: 135.496 #MW
 
 #    region4:
 #        coordinates: { lat: -2.6198, lon: 112.5115 }
@@ -102,11 +120,11 @@ locations:
 #          battery:
 
     # solar pv locations
+    region1-1.coordinates: {lat: 0.9056, lon: 109.4967}
     region2-1.coordinates: {lat: 0.0015, lon: 110.0932}
     region2-2.coordinates: {lat: 0.3534, lon: 110.0001}
-    region2-3.coordinates: {lat: 0.9056, lon: 109.4967}
 
-    region2-1, region2-2, region2-3:
+    region1-1, region2-1, region2-2:
         techs:
             solar:
     # solar and wind locations end
@@ -122,13 +140,13 @@ links:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 100000
+                    energy_cap_max: 10000
 
     region1,region3:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 100000
+                    energy_cap_max: 10000
 
 #    region4,region5:
 #        techs:
@@ -167,13 +185,13 @@ links:
 #                    energy_cap_max: 10000
 
     # links between solar and wind and regions
+    region1,region1-1:
+        techs:
+            free_transmission:
     region2,region2-1:
         techs:
             free_transmission:
     region2,region2-2:
-        techs:
-            free_transmission:
-    region2,region2-3:
         techs:
             free_transmission:
 

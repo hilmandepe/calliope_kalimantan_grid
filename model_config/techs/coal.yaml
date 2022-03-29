@@ -3,7 +3,7 @@ techs:
   coal:
     essentials:
         name: 'Supercritical coal turbine'
-        color: '##3F3F3F'
+        color: '#3F3F3F'
         parent: supply
         carrier_out: power
     constraints:
@@ -17,5 +17,5 @@ techs:
             interest_rate: 0.10
             energy_cap: 0.00165 # USD per kW
             om_con: 0.00013 # USD per kWh
-        co2:
-            om_prod: 0.85 # kgCO2eq/kWh
+        #co2:
+        #    om_prod: 0.85 # kgCO2eq/kWh
