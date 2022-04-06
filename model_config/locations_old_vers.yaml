@@ -12,16 +12,13 @@ locations:
                     resource: file=demand-1.csv:demand
             diesel:
                 constraints:
-                    energy_cap_max: 41.71 #MW
+                    energy_cap_max: 133.297 #MW
             coal:
                 constraints:
-                    energy_cap_max: 104.4 #MW
+                    energy_cap_max: 250.0 #MW
             biomass:
                 constraints:
-                    energy_cap_max: 2.9 #MW
-            hydro:
-                constraints:
-                    energy_cap_max: 1.31 #MW
+                    energy_cap_max: 10.0 #MW
 
     region2:
         coordinates: {lat: 0.1093, lon: 110.5921}
@@ -31,16 +28,17 @@ locations:
                     resource: file=demand-2.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 1.02 #MW
+                    energy_cap_max: 3.5 #MW
             coal:
                 constraints:
-                    energy_cap_max: 22.04 #MW
+                    energy_cap_max: 186.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 42.01 #MW
+                    energy_cap_max: 112.093 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 29.80 #MW
+                    energy_cap_max: 92.025 #MW
+            battery:
 
     region3:
         coordinates: {lat: -1.7743, lon: 110.0303}
@@ -50,13 +48,10 @@ locations:
                     resource: file=demand-3.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 1.45 # MW
-            ccgt:
-                constraints:
-                    energy_cap_max: 19.04 #MW
+                    energy_cap_max: 5.0 # MW
             diesel:
                 constraints:
-                    energy_cap_max: 41.62 #MW
+                    energy_cap_max: 135.496 #MW
 
 #    region4:
 #        coordinates: { lat: -2.6198, lon: 112.5115 }
