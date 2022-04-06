@@ -17,6 +17,6 @@ techs:
             monetary:
                 interest_rate: 0.10
                 energy_cap: 0.00075 # USD per kW
-                om_con: 0.00013 # USD per kWh
+                om_con: 0.00130 # USD per kWh
                 #co2:
                 #om_prod: 0.403 # kg CO2eq/kWh

@@ -4,6 +4,7 @@ import:
     - 'techs/coal.yaml'
     - 'techs/diesel.yaml'
     - 'techs/hydro.yaml'
+    - 'techs/geothermal.yaml'
     - 'techs/solar.yaml'
     - 'techs/battery.yaml'
     - 'techs/import.yaml'
@@ -45,7 +46,7 @@ techs:
     free_transmission:
         essentials:
             name: 'Local power transmission'
-            color: '#6783E3'
+            color: '#C9C657'
             parent: transmission
             carrier: power
         constraints:

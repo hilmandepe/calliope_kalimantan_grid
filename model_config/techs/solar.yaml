@@ -20,9 +20,9 @@ techs:
         costs:
             monetary:
                 interest_rate: 0.10
-                storage_cap: 5
-                resource_area: 200
-                resource_cap: 1
+                storage_cap: 0.001
+                resource_area: 0.001
+                resource_cap: 0.001
                 energy_cap: 0.00095 # USD per kWh
                 om_prod: 0.00001 # USD per kWh
                 #co2:
