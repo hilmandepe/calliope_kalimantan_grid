@@ -1,25 +1,25 @@
 techs:
 
-  wind_offshore:
-    essentials:
-        name: 'Offshore wind turbine'
-        color: '#3272B2'
-        parent: supply_plus
-        carrier_out: power
-    constraints:
-        resource: file=wind_offhore_resource.csv
-        resource_unit: energy_per_area
-        energy_eff: 1
-        resource_area_max: inf
-        energy_cap_max: 0 # Overridden in locations
-        lifetime: 25
-    costs:
-      monetary:
-          interest_rate: 0.10
-          storage_cap: 50
-          resource_area: 200
-          resource_cap: 200
-          energy_cap: 0.00400 # USD per kWh
-          om_con: 0.00001 # USD per kWh
-      co2:
-          om_prod: 0.0120 # kg CO2eq/kWh
+    wind_offshore:
+        essentials:
+            name: 'Offshore wind turbine'
+            color: '#3272B2'
+            parent: supply_plus
+            carrier_out: power
+        constraints:
+            resource: file=wind_offhore_resource.csv
+            resource_unit: energy_per_area
+            energy_eff: 1
+            resource_area_max: inf
+            energy_cap_max: 100 # Overridden in locations
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                storage_cap: 0.001
+                resource_area: 0.001
+                resource_cap: 0.001
+                energy_cap: 4.0 # USD per kWh
+                om_con: 0.0003 # USD/MWh
+            emission:
+                om_prod: 0.0 # kgCO2eq/MWh

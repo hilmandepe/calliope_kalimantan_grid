@@ -1,0 +1,58 @@
+locations:
+
+    # solar pv locations
+
+    W3-PV1.coordinates: {lat: 0.9056, lon: 109.4967}
+    W4-PV1.coordinates: {lat: 0.0015, lon: 110.0932}
+    W4-PV2.coordinates: {lat: 0.3534, lon: 110.0001}
+    N1-PV1.coordinates: {lat: 3.3040, lon: 117.5950}
+    N1-PV2.coordinates: {lat: 3.9300, lon: 116.5480}
+    N1-PV3.coordinates: {lat: 4.1470, lon: 117.9090}
+    N1-PV4.coordinates: {lat: 4.1530, lon: 117.8020}
+    N1-PV5.coordinates: {lat: 4.0630, lon: 117.0230}
+    N1-PV6.coordinates: {lat: 4.1880, lon: 117.3410}
+    N1-PV7.coordinates: {lat: 4.1800, lon: 116.9920}
+
+    W3-PV1, W4-PV1, W4-PV2:
+        techs:
+            solar:
+
+    N1-PV1, N1-PV2, N1-PV3, N1-PV4, N1-PV5, N1-PV6, N1-PV7:
+        techs:
+            solar:
+
+    # solar and wind locations end
+
+links:
+
+    # links between solar and wind and regions
+    W3, W3-PV1:
+        techs:
+            free_transmission:
+    W4, W4-PV1:
+        techs:
+            free_transmission:
+    W4, W4-PV2:
+        techs:
+            free_transmission:
+    N1, N1-PV1:
+        techs:
+            free_transmission:
+    N1, N1-PV2:
+        techs:
+            free_transmission:
+    N1, N1-PV3:
+        techs:
+            free_transmission:
+    N1, N1-PV4:
+        techs:
+            free_transmission:
+    N1, N1-PV5:
+        techs:
+            free_transmission:
+    N1, N1-PV6:
+        techs:
+            free_transmission:
+    N1, N1-PV7:
+        techs:
+            free_transmission:

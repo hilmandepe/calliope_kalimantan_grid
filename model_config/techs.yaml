@@ -1,5 +1,5 @@
 import:
-    - 'techs/ccgt.yaml'
+    - 'techs/gas.yaml'
     - 'techs/biomass.yaml'
     - 'techs/coal.yaml'
     - 'techs/diesel.yaml'
@@ -31,7 +31,7 @@ techs:
     ac_transmission:
         essentials:
             name: 'AC power transmission'
-            color: '#8465A9'
+            color: '#FF8C4A'
             parent: transmission
             carrier: power
         constraints:
@@ -55,4 +55,19 @@ techs:
         costs:
             monetary:
                 om_prod: 0
+
+    hvac_transmission:
+        essentials:
+            name: 'HVAC power transmission'
+            color: '#FC543A'
+            parent: transmission
+            carrier: power
+        constraints:
+            energy_eff: 0.85
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 2.0
+                om_prod: 0.002
     # transmission-end

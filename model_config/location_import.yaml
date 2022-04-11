@@ -1,0 +1,13 @@
+locations:
+
+    W3-IMP.coordinates: {lat: 1.3157, lon: 109.9726}
+
+    W3-IMP:
+        techs:
+            import:
+
+links:
+
+    W3, W3-IMP:
+        techs:
+            hvac_transmission:

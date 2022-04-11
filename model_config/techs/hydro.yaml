@@ -1,21 +1,21 @@
 techs:
 
-  hydro:
-    essentials:
-        name: 'Run-of-river hydropower'
-        color: '#FF2EAC'
-        parent: supply
-        carrier_out: power
-    constraints:
-        resource: inf
-        energy_eff: 0.33
-        energy_cap_max: 40000  # kW
-        energy_ramping: 18
-        lifetime: 80
-    costs:
-        monetary:
-            interest_rate: 0.10
-            energy_cap: 0.00190 # USD per kW
-            om_con: 0.00037 # USD per kWh
-        #co2:
-        #    om_prod: 0.0061 # kgCO2eq/kWh
+    hydro:
+        essentials:
+            name: 'Run-of-river hydropower'
+            color: '#007DEB'
+            parent: supply
+            carrier_out: power
+        constraints:
+            resource: inf
+            energy_eff: 0.33
+            energy_cap_max: 1000  # MW
+            energy_ramping: 18
+            lifetime: 80
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 1.90 # USD/MW
+                om_con: 0.5 # USD/MWh
+            emission:
+                om_prod: 0.0 # kgCO2eq/MWh

@@ -13,9 +13,8 @@ techs:
             resource: file=pv_resource.csv
             resource_unit: energy_per_area
             energy_eff: 1
-            parasitic_eff: 0.99
             resource_area_max: inf
-            energy_cap_max: 10 # MW
+            energy_cap_max: 100 # MW
             lifetime: 25
         costs:
             monetary:
@@ -23,7 +22,7 @@ techs:
                 storage_cap: 0.001
                 resource_area: 0.001
                 resource_cap: 0.001
-                energy_cap: 0.00095 # USD per kWh
-                om_prod: 0.00001 # USD per kWh
-                #co2:
-                #om_prod: 0.0074 # kg CO2eq/kWh
+                energy_cap: 0.95 # USD/MW
+                om_prod: 0.0001 # USD/MWh
+            emission:
+                om_prod: 0.0 # kgCO2eq/MWh

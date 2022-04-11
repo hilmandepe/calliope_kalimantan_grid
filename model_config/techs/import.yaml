@@ -2,21 +2,15 @@ techs:
 
     import:
         essentials:
-            name: 'Imported electricity'
-            color: '#E8FF63'
+            name: 'HVAC Import'
+            color: '#FF4F4F'
             parent: supply
             carrier_out: power
         constraints:
             resource: inf
-            energy_eff: 1.0
-            energy_cap_max: 10  # MW
-            energy_cap_max_systemwide: 10 # MW
-            energy_ramping: 2.4
-            lifetime: 100
+            energy_cap_max: inf  # MW
         costs:
             monetary:
-                interest_rate: 0.10
-                energy_cap: 0.00150 # USD per kW
-                om_con: 0.00013 # USD per kWh
-                #co2:
-                #om_prod: 0.403 # kg CO2eq/kWh
+                om_con: 3.0 # USD/MWh
+            emission:
+                om_prod: 433.0 # kgCO2eq/MWh

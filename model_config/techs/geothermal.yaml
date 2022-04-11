@@ -1,21 +1,21 @@
 techs:
 
-  geothermal:
-    essentials:
-        name: 'Geothermal power'
-        color: '#FFA6CE'
-        parent: supply
-        carrier_out: power
-    constraints:
-        resource: inf
-        energy_eff: 1
-        energy_cap_max: 40000  # kW
-        energy_ramping: 2.4
-        lifetime: 30
-    costs:
-        monetary:
-            interest_rate: 0.10
-            energy_cap: 0.00450  # USD per kW
-            om_con: 0.00050 # USD per kWh
-        co2:
-            om_prod: 0.038 # kgCO2eq/kWh
+    geothermal:
+        essentials:
+            name: 'Geothermal power'
+            color: '#FFA6CE'
+            parent: supply
+            carrier_out: power
+        constraints:
+            resource: inf
+            energy_eff: 1
+            energy_cap_max: 1000  # MW
+            energy_ramping: 2.4
+            lifetime: 30
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 4.5  # USD per kW
+                om_con: 0.5 # USD per kWh
+            emission:
+                om_prod: 0.0 # kgCO2eq/MWh
