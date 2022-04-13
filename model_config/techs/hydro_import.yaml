@@ -1,0 +1,16 @@
+techs:
+
+    hydro_import:
+        essentials:
+            name: 'SESCO Hydropower Import'
+            color: '#0300C7'
+            parent: supply
+            carrier_out: power
+        constraints:
+            resource: inf
+            energy_cap_max: 90  # MW
+        costs:
+            monetary:
+                om_con: 3.5 # USD/MWh
+            emission:
+                om_prod: 0.0 # kgCO2eq/MWh

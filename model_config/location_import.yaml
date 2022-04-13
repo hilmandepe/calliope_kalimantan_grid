@@ -1,10 +1,10 @@
 locations:
 
-    W3-IMP.coordinates: {lat: 1.3157, lon: 109.9726}
+    W3-IMP.coordinates: {lat: 1.3540, lon: 110.3502}
 
     W3-IMP:
         techs:
-            import:
+            hydro_import:
 
 links:
 

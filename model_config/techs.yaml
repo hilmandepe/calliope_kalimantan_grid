@@ -4,10 +4,10 @@ import:
     - 'techs/coal.yaml'
     - 'techs/diesel.yaml'
     - 'techs/hydro.yaml'
+    - 'techs/hydro_import.yaml'
     - 'techs/geothermal.yaml'
     - 'techs/solar.yaml'
     - 'techs/battery.yaml'
-    - 'techs/import.yaml'
 
 techs:
 
