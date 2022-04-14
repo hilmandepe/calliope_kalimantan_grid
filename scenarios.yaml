@@ -2,7 +2,19 @@
 # Scenarios are optional, named combinations of overrides
 ##
 scenarios:
-    scenario_2021: electricity_mix_2021
+    scenario_2021: ["electricity_mix_2021", "low_resolution"]
+    scenario_01_2021: ["electricity_mix_2021","jan2021"]
+    scenario_02_2021: ["electricity_mix_2021","feb2021"]
+    scenario_03_2021: ["electricity_mix_2021","mar2021"]
+    scenario_04_2021: ["electricity_mix_2021","apr2021"]
+    scenario_05_2021: ["electricity_mix_2021","may2021"]
+    scenario_06_2021: ["electricity_mix_2021","jun2021"]
+    scenario_07_2021: ["electricity_mix_2021","jul2021"]
+    scenario_08_2021: ["electricity_mix_2021","aug2021"]
+    scenario_09_2021: ["electricity_mix_2021","sep2021"]
+    scenario_10_2021: ["electricity_mix_2021","oct2021"]
+    scenario_11_2021: ["electricity_mix_2021","nov2021"]
+    scenario_12_2021: ["electricity_mix_2021","dec2021"]
 ##
 # Overrides are the building blocks from which scenarios can be defined
 ##
@@ -24,7 +36,7 @@ overrides:
             diesel_energy_mix:
                 techs: ['diesel']
                 demand_share_max:
-                    power: 0.0700
+                    power: 0.0800
 
             gas_energy_mix:
                 techs: ['gas']
@@ -43,5 +55,48 @@ overrides:
 
             hydro_import_energy_mix:
                 techs: ['hydro_import']
-                demand_share_max:
-                    power: 0.0700
+                demand_share_equals:
+                    power: 0.0680
+
+
+    jan2021:
+        model.subset_time: ['2021-01-01', '2021-01-31']
+
+    feb2021:
+        model.subset_time: ['2021-02-01', '2021-02-28']
+
+    mar2021:
+        model.subset_time: ['2021-03-01', '2021-03-31']
+
+    apr2021:
+        model.subset_time: ['2021-04-01', '2021-04-30']
+
+    may2021:
+        model.subset_time: ['2021-05-01', '2021-05-31']
+
+    jun2021:
+        model.subset_time: ['2021-06-01', '2021-06-30']
+
+    jul2021:
+        model.subset_time: ['2021-07-01', '2021-07-31']
+
+    aug2021:
+        model.subset_time: ['2021-08-01', '2021-08-31']
+
+    sep2021:
+        model.subset_time: ['2021-09-01', '2021-09-30']
+
+    oct2021:
+        model.subset_time: ['2021-10-01', '2021-10-31']
+
+    nov2021:
+        model.subset_time: ['2021-11-01', '2021-11-30']
+
+    dec2021:
+        model.subset_time: ['2021-12-01', '2021-12-31']
+
+    low_resolution:
+        model:
+            time:
+                function: resample
+                function_options: {'resolution': '6H'}

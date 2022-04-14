@@ -8,9 +8,14 @@ techs:
             carrier_out: power
         constraints:
             resource: inf
-            energy_cap_max: 90  # MW
+            energy_eff: 0.33
+            energy_cap_max: inf  # MW
+            lifetime: 80
         costs:
             monetary:
-                om_con: 3.5 # USD/MWh
+                interest_rate: 0.10
+                energy_cap: 1900000.0 # USD/MW
+                om_annual: 53000.0 # USD/MW
+                om_con: 0.5 # USD/MWh
             emission:
                 om_prod: 0.0 # kgCO2eq/MWh

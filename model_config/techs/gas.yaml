@@ -10,12 +10,12 @@ techs:
             resource: inf
             energy_eff: 0.56
             energy_cap_max: 100 0 # MW
-            energy_ramping: 2.4
             lifetime: 30
         costs:
             monetary:
                 interest_rate: 0.10
-                energy_cap: 0.75 # USD/MW
-                om_con: 2.0 # USD/MWh
+                energy_cap: 750000.0 # USD/MW
+                om_annual: 23000.0 # USD/MW
+                om_con: 3.0 # USD/MWh
             emission:
                 om_prod: 433.0 # kgCO2eq/MWh

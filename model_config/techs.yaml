@@ -40,8 +40,8 @@ techs:
         costs:
             monetary:
                 interest_rate: 0.10
-                energy_cap: 2.0
-                om_prod: 0.002
+                energy_cap: 1.0 # mil USD/MW.km 1 USD = 14500 IDR
+                om_prod: 4.8 # USD/MWh
 
     free_transmission:
         essentials:
@@ -54,7 +54,7 @@ techs:
             energy_eff: 1.0
         costs:
             monetary:
-                om_prod: 0
+                om_prod: 0.0
 
     hvac_transmission:
         essentials:
@@ -68,6 +68,6 @@ techs:
         costs:
             monetary:
                 interest_rate: 0.10
-                energy_cap: 2.0
-                om_prod: 0.002
+                energy_cap: 1.06 # USD/MW.km 1 USD = 14500 IDR
+                om_prod: 11.2 # USD/MWh
     # transmission-end

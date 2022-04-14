@@ -7,22 +7,18 @@ techs:
             parent: supply_plus
             carrier_out: power
         constraints:
-            storage_cap_max: 10 # MW
-            energy_cap_per_storage_cap_max: 1
-            storage_loss: 0.002
             resource: file=pv_resource.csv
             resource_unit: energy_per_area
             energy_eff: 1
             resource_area_max: inf
-            energy_cap_max: 100 # MW
             lifetime: 25
         costs:
             monetary:
                 interest_rate: 0.10
-                storage_cap: 0.001
-                resource_area: 0.001
-                resource_cap: 0.001
-                energy_cap: 0.95 # USD/MW
-                om_prod: 0.0001 # USD/MWh
+                storage_cap: 0.0 # USD/MWh
+                resource_area: 2.0 # USD per m2 1 USD = 14500 IDR
+                energy_cap: 700000.0 # USD/MW
+                om_annual: 15000.0 # USD/MW
+                om_prod: 0.0 # USD/MWh
             emission:
                 om_prod: 0.0 # kgCO2eq/MWh

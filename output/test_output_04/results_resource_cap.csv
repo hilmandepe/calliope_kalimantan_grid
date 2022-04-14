@@ -1,0 +1,11 @@
+locs,techs,resource_cap
+N1-PV1,solar,0.1
+N1-PV2,solar,0.1
+N1-PV3,solar,0.34
+N1-PV4,solar,0.2
+N1-PV5,solar,0.1
+N1-PV6,solar,0.1
+N1-PV7,solar,0.1
+W3-PV1,solar,0.08
+W4-PV1,solar,0.06
+W4-PV2,solar,0.04

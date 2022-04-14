@@ -1,0 +1,14 @@
+techs,names
+ac_transmission,AC power transmission
+battery,Li-ion battery storage
+biomass,Biomass power
+coal,Supercritical coal turbine
+demand_power,Power demand
+diesel,Diesel power generator
+free_transmission,Local power transmission
+gas,Combined cycle gas turbine
+geothermal,Geothermal power
+hvac_transmission,HVAC power transmission
+hydro,Run-of-river hydropower
+hydro_import,SESCO Hydropower Import
+solar,Solar PV power
