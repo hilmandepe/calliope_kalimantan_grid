@@ -1,0 +1,11 @@
+costs,locs,techs,cost_resource_area
+monetary,N1-PV1,solar,0.001
+monetary,N1-PV2,solar,0.001
+monetary,N1-PV3,solar,0.001
+monetary,N1-PV4,solar,0.001
+monetary,N1-PV5,solar,0.001
+monetary,N1-PV6,solar,0.001
+monetary,N1-PV7,solar,0.001
+monetary,W3-PV1,solar,0.001
+monetary,W4-PV1,solar,0.001
+monetary,W4-PV2,solar,0.001

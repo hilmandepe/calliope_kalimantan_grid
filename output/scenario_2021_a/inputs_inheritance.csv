@@ -1,0 +1,14 @@
+techs,inheritance
+ac_transmission,transmission
+battery,storage
+biomass,supply
+coal,supply
+demand_power,demand
+diesel,supply
+free_transmission,transmission
+gas,supply
+geothermal,supply
+hvac_transmission,transmission
+hydro,supply
+hydro_import,supply
+solar,supply_plus

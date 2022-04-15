@@ -1,0 +1,7 @@
+group_names_demand_share_max,group_demand_share_max
+biomass_energy_mix,0.006
+coal_energy_mix,0.69
+diesel_energy_mix,0.07
+gas_energy_mix,0.17
+geothermal_energy_mix,0.0
+hydro_energy_mix,0.02
