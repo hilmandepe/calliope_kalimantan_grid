@@ -1,1 +1,1 @@
-calliope run model.yaml --scenario=scenario_2021 --save_csv=output/scenario_2021 --save_plots=output/plot_scenario_2021.html
+calliope run model.yaml --scenario=scenario_2021 --save_csv=output/scenario_2021_h --save_plots=output/plot_scenario_2021_h.html

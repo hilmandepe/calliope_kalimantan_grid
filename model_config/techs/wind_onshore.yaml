@@ -11,7 +11,6 @@ techs:
             resource_unit: energy_per_area
             energy_eff: 1
             resource_area_max: inf
-            energy_cap_max: 100 # MW overridden in locations
             lifetime: 25
         costs:
             monetary:
@@ -20,6 +19,6 @@ techs:
                 resource_area: 2.0 # USD per m2 1 USD = 14500 IDR
                 energy_cap: 1880000.0 # USD per kWh
                 om_annual: 60000.0 # USD/MW
-                om_con: 0.0 # USD/MWh
+                om_prod: 0.0 # USD/MWh
             emission:
                 om_prod: 0.0 # kg CO2eq/kWh

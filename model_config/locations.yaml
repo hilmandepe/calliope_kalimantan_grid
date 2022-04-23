@@ -12,22 +12,22 @@ locations:
                     resource: file=demand-W1.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             coal:
                 constraints:
-                    energy_cap_max: 250.0 #MW
+                    energy_cap_equals: 250.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 24.56 #MW
+                    energy_cap_equals: 24.56 #MW
 
     W2:
         coordinates: {lat: 0.0453, lon: 109.2397}
@@ -37,22 +37,22 @@ locations:
                     resource: file=demand-W2.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 10.0 #MW
+                    energy_cap_equals: 10.0 #MW
             coal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 134.65 #MW
+                    energy_cap_equals: 134.65 #MW
 
 
     W3:
@@ -63,22 +63,22 @@ locations:
                     resource: file=demand-W3.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_equals: 0.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 110.0 #MW
+                    energy_cap_equals: 110.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 3.97 #MW
+                    energy_cap_equals: 3.97 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 7.64 #MW
+                    energy_cap_equals: 7.64 #MW
 
     W4:
         coordinates: {lat: 0.1775, lon: 110.0471}
@@ -88,22 +88,22 @@ locations:
                     resource: file=demand-W4.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_equals: 0.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 27.0 #MW
+                    energy_cap_equals: 27.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 70.36 #MW
+                    energy_cap_equals: 70.36 #MW
 
     W5:
         coordinates: {lat: 0.0639, lon: 110.9555}
@@ -113,22 +113,22 @@ locations:
                     resource: file=demand-W5.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 5.0 # MW
+                    energy_cap_equals: 5.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 34.0 #MW
+                    energy_cap_equals: 34.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 166.5 #MW
+                    energy_cap_equals: 166.5 #MW
 
     W6:
         coordinates: {lat: -1.7742, lon: 110.0303}
@@ -138,22 +138,22 @@ locations:
                     resource: file=demand-W6.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 3.5 # MW
+                    energy_cap_equals: 3.5 # MW
             coal:
                 constraints:
-                    energy_cap_max: 49.0 #MW
+                    energy_cap_equals: 49.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.3 #MW
+                    energy_cap_equals: 0.3 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 97.69 #MW
+                    energy_cap_equals: 97.69 #MW
 
     C1:
         coordinates: {lat: -2.6152, lon: 111.7037}
@@ -163,22 +163,22 @@ locations:
                     resource: file=demand-C1.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 13.0 # MW
+                    energy_cap_equals: 13.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 79.39 #MW
+                    energy_cap_equals: 79.39 #MW
 
     C2:
         coordinates: {lat: -2.6221, lon: 112.9154}
@@ -188,22 +188,22 @@ locations:
                     resource: file=demand-C2.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 4.4 # MW
+                    energy_cap_equals: 4.4 # MW
             coal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 17.07 #MW
+                    energy_cap_equals: 17.07 #MW
 
     C3:
         coordinates: {lat: -2.1166, lon: 113.7459}
@@ -213,22 +213,22 @@ locations:
                     resource: file=demand-C3.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_equals: 0.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 230.07 #MW
+                    energy_cap_equals: 230.07 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 58.91 #MW
+                    energy_cap_equals: 58.91 #MW
 
     C4:
         coordinates: {lat: -2.8550, lon: 114.2790}
@@ -238,22 +238,22 @@ locations:
                     resource: file=demand-C4.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_equals: 0.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 120.0 #MW
+                    energy_cap_equals: 120.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 25.5 #MW
+                    energy_cap_equals: 25.5 #MW
 
     C5:
         coordinates: {lat: -0.7442, lon: 115.0022}
@@ -263,22 +263,22 @@ locations:
                     resource: file=demand-C5.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_equals: 0.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 7.0 #MW
+                    energy_cap_equals: 7.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 156.3 #MW
+                    energy_cap_equals: 156.3 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 11.56 #MW
+                    energy_cap_equals: 11.56 #MW
 
     S1:
         coordinates: {lat: -3.4291, lon: 114.7738}
@@ -288,22 +288,22 @@ locations:
                     resource: file=demand-S1.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 2.4 # MW
+                    energy_cap_equals: 2.4 # MW
             coal:
                 constraints:
-                    energy_cap_max: 103.2 #MW
+                    energy_cap_equals: 103.2 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 30.0 #MW
+                    energy_cap_equals: 30.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 97.71 #MW
+                    energy_cap_equals: 97.71 #MW
 
     S2:
         coordinates: {lat: -2.2607, lon: 115.2630}
@@ -313,22 +313,22 @@ locations:
                     resource: file=demand-S2.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_equals: 0.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 290.0 #MW
+                    energy_cap_equals: 290.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 26.78 #MW
+                    energy_cap_equals: 26.78 #MW
 
     S3:
         coordinates: {lat: -3.5975, lon: 115.7526}
@@ -338,22 +338,22 @@ locations:
                     resource: file=demand-S3.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_equals: 0.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 281.0 #MW
+                    energy_cap_equals: 281.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 18.67 #MW
+                    energy_cap_equals: 18.67 #MW
 
     E1:
         coordinates: {lat: -1.7614, lon: 116.1132}
@@ -363,22 +363,22 @@ locations:
                     resource: file=demand-E1.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_equals: 0.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 22.73 #MW
+                    energy_cap_equals: 22.73 #MW
 
     E2:
         coordinates: {lat: -1.1904, lon: 116.8778}
@@ -388,22 +388,22 @@ locations:
                     resource: file=demand-E2.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_equals: 0.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 265.0 #MW
+                    energy_cap_equals: 265.0 #MW
             gas:
                 constraints:
-                    energy_cap_max: 125.55 #MW
+                    energy_cap_equals: 125.55 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 117.69 #MW
+                    energy_cap_equals: 117.69 #MW
 
     E3:
         coordinates: {lat: -0.4847, lon: 117.0814}
@@ -413,22 +413,22 @@ locations:
                     resource: file=demand-E3.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 2.0 # MW
+                    energy_cap_equals: 2.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 422.5 #MW
+                    energy_cap_equals: 422.5 #MW
             gas:
                 constraints:
-                    energy_cap_max: 9.6 #MW
+                    energy_cap_equals: 9.6 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 398.81 #MW
+                    energy_cap_equals: 398.81 #MW
 
     E4:
         coordinates: {lat: 0.3158, lon: 117.5022}
@@ -438,22 +438,22 @@ locations:
                     resource: file=demand-E4.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_equals: 0.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 277.63 #MW
+                    energy_cap_equals: 259.00 #MW
             gas:
                 constraints:
-                    energy_cap_max: 61.06 #MW
+                    energy_cap_equals: 61.06 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 35.12 #MW
+                    energy_cap_equals: 35.12 #MW
 
     E5:
         coordinates: {lat: 1.0533, lon: 116.9215}
@@ -463,22 +463,22 @@ locations:
                     resource: file=demand-E5.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 0.81 # MW
+                    energy_cap_equals: 0.81 # MW
             coal:
                 constraints:
-                    energy_cap_max: 39.0 #MW
+                    energy_cap_equals: 57.63 #MW
             gas:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 38.46 #MW
+                    energy_cap_equals: 38.46 #MW
 
     N1:
         coordinates: {lat: 3.2988, lon: 116.9458}
@@ -488,22 +488,22 @@ locations:
                     resource: file=demand-N1.csv:demand
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_equals: 0.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 14.5 #MW
+                    energy_cap_equals: 14.5 #MW
             gas:
                 constraints:
-                    energy_cap_max: 123.72 #MW
+                    energy_cap_equals: 123.72 #MW
             geothermal:
                 constraints:
-                    energy_cap_max: 0.0 #MW
+                    energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 0.24 #MW
+                    energy_cap_equals: 0.24 #MW
             diesel:
                 constraints:
-                    energy_cap_max: 122.75 #MW
+                    energy_cap_equals: 122.75 #MW
 
 
 ##
@@ -517,114 +517,114 @@ links:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     W1,W3:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     W2,W4:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     W2,W6:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     W3,W4:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     W4,W5:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     C1,C2:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     C2,C3:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     C3,C4:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     C4,S1:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     C5,S2:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     S1,S2:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     S1,S3:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     S2,E1:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     E1,E2:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     E2,E3:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
 
     E3,E4:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
 
     E4,E5:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100
 
     E5,N1:
         techs:
             ac_transmission:
                 constraints:
-                    energy_cap_max: 1000
+                    energy_cap_max: 100

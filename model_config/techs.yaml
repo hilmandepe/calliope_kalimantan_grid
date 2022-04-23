@@ -35,7 +35,7 @@ techs:
             parent: transmission
             carrier: power
         constraints:
-            energy_eff: 0.85
+            energy_eff: 0.91
             lifetime: 25
         costs:
             monetary:
@@ -63,7 +63,7 @@ techs:
             parent: transmission
             carrier: power
         constraints:
-            energy_eff: 0.85
+            energy_eff: 0.91
             lifetime: 25
         costs:
             monetary:

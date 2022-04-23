@@ -2,8 +2,8 @@ locations:
 
     # solar pv locations
 
-    W3-PV1.coordinates: {lat: 2.0070, lon: 109.5970}
-    W3-PV2.coordinates: {lat: 1.2520, lon: 110.0710}
+    W1-PV1.coordinates: {lat: 2.0070, lon: 109.5970}
+    W3-PV1.coordinates: {lat: 1.2520, lon: 110.0710}
     W4-PV1.coordinates: {lat: -0.2680, lon: 109.8590}
     N1-PV1.coordinates: {lat: 3.3040, lon: 117.5950}
     N1-PV2.coordinates: {lat: 3.9300, lon: 116.5480}
@@ -13,52 +13,86 @@ locations:
     N1-PV6.coordinates: {lat: 4.1880, lon: 117.3410}
     N1-PV7.coordinates: {lat: 4.1800, lon: 116.9920}
 
+    W1-PV1:
+        techs:
+            solar:
+                constraints:
+                    resource: file=pv_resource.csv:W1-PV1
+                    energy_cap_equals: 0.08 # MW
+
     W3-PV1:
         techs:
             solar:
                 constraints:
-                    energy_cap_equals: 0.08 # MW
-
-    W3-PV2:
-        techs:
-            solar:
-                constraints:
+                    resource: file=pv_resource.csv:W3-PV1
                     energy_cap_equals: 0.04 # MW
 
     W4-PV1:
         techs:
             solar:
                 constraints:
+                    resource: file=pv_resource.csv:W4-PV1
                     energy_cap_equals: 0.06 # MW
 
 
-    N1-PV1, N1-PV2, N1-PV5, N1-PV6, N1-PV7:
+    N1-PV1:
         techs:
             solar:
                 constraints:
+                    resource: file=pv_resource.csv:N1-PV1
+                    energy_cap_equals: 0.1 # MW
+
+    N1-PV2:
+        techs:
+            solar:
+                constraints:
+                    resource: file=pv_resource.csv:N1-PV2
                     energy_cap_equals: 0.1 # MW
 
     N1-PV3:
         techs:
             solar:
                 constraints:
+                    resource: file=pv_resource.csv:N1-PV3
                     energy_cap_equals: 0.34 # MW
 
     N1-PV4:
         techs:
             solar:
                 constraints:
+                    resource: file=pv_resource.csv:N1-PV4
                     energy_cap_equals: 0.2 # MW
+
+    N1-PV5:
+        techs:
+            solar:
+                constraints:
+                    resource: file=pv_resource.csv:N1-PV5
+                    energy_cap_equals: 0.1 # MW
+
+    N1-PV6:
+        techs:
+            solar:
+                constraints:
+                    resource: file=pv_resource.csv:N1-PV6
+                    energy_cap_equals: 0.1 # MW
+
+    N1-PV7:
+        techs:
+            solar:
+                constraints:
+                    resource: file=pv_resource.csv:N1-PV7
+                    energy_cap_equals: 0.1 # MW
 
     # solar locations end
 
 links:
 
     # links between solar and regions
-    W3, W3-PV1:
+    W1, W1-PV1:
         techs:
             free_transmission:
-    W3, W3-PV2:
+    W3, W3-PV1:
         techs:
             free_transmission:
     W4, W4-PV1:

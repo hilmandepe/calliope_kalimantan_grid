@@ -2,19 +2,19 @@
 # Scenarios are optional, named combinations of overrides
 ##
 scenarios:
-    scenario_2021: ["electricity_mix_2021", "low_resolution"]
-    scenario_01_2021: ["electricity_mix_2021","jan2021"]
-    scenario_02_2021: ["electricity_mix_2021","feb2021"]
-    scenario_03_2021: ["electricity_mix_2021","mar2021"]
-    scenario_04_2021: ["electricity_mix_2021","apr2021"]
-    scenario_05_2021: ["electricity_mix_2021","may2021"]
-    scenario_06_2021: ["electricity_mix_2021","jun2021"]
-    scenario_07_2021: ["electricity_mix_2021","jul2021"]
-    scenario_08_2021: ["electricity_mix_2021","aug2021"]
-    scenario_09_2021: ["electricity_mix_2021","sep2021"]
-    scenario_10_2021: ["electricity_mix_2021","oct2021"]
-    scenario_11_2021: ["electricity_mix_2021","nov2021"]
-    scenario_12_2021: ["electricity_mix_2021","dec2021"]
+    scenario_2021: ["electricity_mix_2021", "minimize_cost_2021"]
+    scenario_01_2021: ["electricity_mix_2021","jan2021", "minimize_cost_2021"]
+    scenario_02_2021: ["electricity_mix_2021","feb2021", "minimize_cost_2021"]
+    scenario_03_2021: ["electricity_mix_2021","mar2021", "minimize_cost_2021"]
+    scenario_04_2021: ["electricity_mix_2021","apr2021", "minimize_cost_2021"]
+    scenario_05_2021: ["electricity_mix_2021","may2021", "minimize_cost_2021"]
+    scenario_06_2021: ["electricity_mix_2021","jun2021", "minimize_cost_2021"]
+    scenario_07_2021: ["electricity_mix_2021","jul2021", "minimize_cost_2021"]
+    scenario_08_2021: ["electricity_mix_2021","aug2021", "minimize_cost_2021"]
+    scenario_09_2021: ["electricity_mix_2021","sep2021", "minimize_cost_2021"]
+    scenario_10_2021: ["electricity_mix_2021","oct2021", "minimize_cost_2021"]
+    scenario_11_2021: ["electricity_mix_2021","nov2021", "minimize_cost_2021"]
+    scenario_12_2021: ["electricity_mix_2021","dec2021", "minimize_cost_2021"]
 ##
 # Overrides are the building blocks from which scenarios can be defined
 ##
@@ -26,22 +26,22 @@ overrides:
             biomass_energy_mix:
                 techs: ['biomass']
                 demand_share_max:
-                    power: 0.0060
+                    power: 0.0150
 
             coal_energy_mix:
                 techs: ['coal']
                 demand_share_max:
-                    power: 0.6900
+                    power: 0.6850
 
             diesel_energy_mix:
                 techs: ['diesel']
                 demand_share_max:
-                    power: 0.0800
+                    power: 0.0750
 
             gas_energy_mix:
                 techs: ['gas']
                 demand_share_max:
-                    power: 0.1700
+                    power: 0.1650
 
             geothermal_energy_mix:
                 techs: ['geothermal']
@@ -60,10 +60,10 @@ overrides:
 
 
     jan2021:
-        model.subset_time: ['2021-01-01', '2021-01-31']
+        model.subset_time: ['2021-01-01', '2021-01-07']
 
     feb2021:
-        model.subset_time: ['2021-02-01', '2021-02-28']
+        model.subset_time: ['2021-02-01', '2021-02-07']
 
     mar2021:
         model.subset_time: ['2021-03-01', '2021-03-31']
@@ -100,3 +100,10 @@ overrides:
             time:
                 function: resample
                 function_options: {'resolution': '6H'}
+
+    minimize_cost_2021:
+        run:
+            ensure_feasibility: false
+            objective_options:
+                cost_class: {'monetary': 1, 'emission': 0}
+                sense: minimize

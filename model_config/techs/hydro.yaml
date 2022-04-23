@@ -9,7 +9,7 @@ techs:
         constraints:
             resource: inf
             energy_eff: 0.33
-            energy_cap_max: 1000  # MW
+            energy_cap_max: inf  # MW
             lifetime: 80
         costs:
             monetary:
