@@ -60,7 +60,7 @@ overrides:
 
 
     jan2021:
-        model.subset_time: ['2021-01-01', '2021-01-07']
+        model.subset_time: ['2021-01-01', '2021-01-31']
 
     feb2021:
         model.subset_time: ['2021-02-01', '2021-02-07']
