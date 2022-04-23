@@ -11,10 +11,10 @@ techs:
             resource_unit: energy_per_area
             energy_eff: 1
             resource_area_max: inf
-            lifetime: 25
+            lifetime: 27
         costs:
             monetary:
-                interest_rate: 0.10
+                interest_rate: 0.04
                 storage_cap: 0.0 # USD/MWh
                 resource_area: 4.0 # USD per m2 1 USD = 14500 IDR
                 energy_cap: 4000000.0 # USD per kWh

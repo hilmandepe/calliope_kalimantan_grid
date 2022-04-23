@@ -13,7 +13,7 @@ techs:
             lifetime: 20
         costs:
             monetary:
-                interest_rate: 0.10
+                interest_rate: 0.04
                 energy_cap: 2500000.0  # USD/MW
                 om_annual: 48000.0 # USD/MW
                 om_con: 3.0 # USD/MWh

@@ -13,10 +13,10 @@ techs:
             lifetime: 25
         costs:
             monetary:
-                interest_rate: 0.10
+                interest_rate: 0.04
                 storage_cap: 0.0 # USD/MWh
                 resource_area: 2.0 # USD per m2 1 USD = 14500 IDR
-                energy_cap: 700000.0 # USD/MW
+                energy_cap: 1190000.0 # USD/MW
                 om_annual: 15000.0 # USD/MW
                 om_prod: 0.0 # USD/MWh
             emission:

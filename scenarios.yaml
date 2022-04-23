@@ -36,12 +36,12 @@ overrides:
             diesel_energy_mix:
                 techs: ['diesel']
                 demand_share_max:
-                    power: 0.0750
+                    power: 0.0800
 
             gas_energy_mix:
                 techs: ['gas']
                 demand_share_max:
-                    power: 0.1650
+                    power: 0.1600
 
             geothermal_energy_mix:
                 techs: ['geothermal']

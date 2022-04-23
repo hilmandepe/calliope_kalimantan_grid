@@ -13,7 +13,7 @@ techs:
             lifetime: 30
         costs:
             monetary:
-                interest_rate: 0.10
+                interest_rate: 0.04
                 energy_cap: 4500000.0  # USD per kW
                 om_annual: 20000.0 # USD/MW
                 om_con: 0.37 # USD per kWh
