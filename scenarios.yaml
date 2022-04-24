@@ -26,22 +26,22 @@ overrides:
             biomass_energy_mix:
                 techs: ['biomass']
                 demand_share_max:
-                    power: 0.0150
+                    power: 0.0100
 
             coal_energy_mix:
                 techs: ['coal']
                 demand_share_max:
-                    power: 0.6850
+                    power: 0.6900
 
             diesel_energy_mix:
                 techs: ['diesel']
                 demand_share_max:
-                    power: 0.0800
+                    power: 0.0750
 
             gas_energy_mix:
                 techs: ['gas']
                 demand_share_max:
-                    power: 0.1600
+                    power: 0.1750
 
             geothermal_energy_mix:
                 techs: ['geothermal']

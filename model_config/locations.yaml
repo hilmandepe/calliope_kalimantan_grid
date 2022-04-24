@@ -75,7 +75,7 @@ locations:
                     energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_equals: 3.97 #MW
+                    energy_cap_equals: 0.0 #MW
             diesel:
                 constraints:
                     energy_cap_equals: 7.64 #MW
@@ -88,13 +88,13 @@ locations:
                     resource: file=demand-W4.csv:demand
             biomass:
                 constraints:
-                    energy_cap_equals: 0.0 # MW
+                    energy_cap_equals: 5.0 # MW
             coal:
                 constraints:
                     energy_cap_equals: 27.0 #MW
             gas:
                 constraints:
-                    energy_cap_equals: 0.0 #MW
+                    energy_cap_equals: 34.0 #MW
             geothermal:
                 constraints:
                     energy_cap_equals: 0.0 #MW
@@ -113,19 +113,19 @@ locations:
                     resource: file=demand-W5.csv:demand
             biomass:
                 constraints:
-                    energy_cap_equals: 5.0 # MW
+                    energy_cap_equals: 0.0 # MW
             coal:
                 constraints:
                     energy_cap_equals: 0.0 #MW
             gas:
                 constraints:
-                    energy_cap_equals: 34.0 #MW
+                    energy_cap_equals: 0.0 #MW
             geothermal:
                 constraints:
                     energy_cap_equals: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_equals: 0.0 #MW
+                    energy_cap_equals: 3.97 #MW
             diesel:
                 constraints:
                     energy_cap_equals: 166.5 #MW
@@ -533,12 +533,12 @@ links:
                     energy_cap_max: 145.95
                     energy_cap_min: 1.0
 
-    W2,W6:
-        techs:
-            ac_transmission:
-                constraints:
-                    energy_cap_max: 145.95
-                    energy_cap_min: 1.0
+#    W2,W6:
+#        techs:
+#            ac_transmission:
+#                constraints:
+#                    energy_cap_max: 145.95
+#                    energy_cap_min: 1.0
 
     W3,W4:
         techs:
@@ -547,12 +547,12 @@ links:
                     energy_cap_max: 145.95
                     energy_cap_min: 1.0
 
-    W4,W5:
-        techs:
-            ac_transmission:
-                constraints:
-                    energy_cap_max: 145.95
-                    energy_cap_min: 1.0
+#    W4,W5:
+#        techs:
+#            ac_transmission:
+#                constraints:
+#                    energy_cap_max: 145.95
+#                    energy_cap_min: 1.0
 
     C1,C2:
         techs:
@@ -633,16 +633,16 @@ links:
                     energy_cap_min: 1.0
 
 
-    E4,E5:
-        techs:
-            ac_transmission:
-                constraints:
-                    energy_cap_max: 145.95
-                    energy_cap_min: 1.0
+#    E4,E5:
+#        techs:
+#            ac_transmission:
+#                constraints:
+#                    energy_cap_max: 145.95
+#                    energy_cap_min: 1.0
 
-    E5,N1:
-        techs:
-            ac_transmission:
-                constraints:
-                    energy_cap_max: 145.95 # 150 kV x 973 A - TACSR 240 mm2 conductor
-                    energy_cap_min: 1.0
+#    E5,N1:
+#        techs:
+#            ac_transmission:
+#                constraints:
+#                    energy_cap_max: 145.95 # 150 kV x 973 A - TACSR 240 mm2 conductor
+#                    energy_cap_min: 1.0
