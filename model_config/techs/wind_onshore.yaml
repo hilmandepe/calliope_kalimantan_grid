@@ -8,7 +8,7 @@ techs:
             carrier_out: power
         constraints:
             resource: file=wind_onshore_resource.csv
-            resource_unit: energy_per_area
+            resource_unit: energy_per_cap
             energy_eff: 1
             resource_area_max: inf
             lifetime: 27
@@ -17,7 +17,7 @@ techs:
                 interest_rate: 0.04
                 storage_cap: 0.0 # USD/MWh
                 resource_area: 2.0 # USD per m2 1 USD = 14500 IDR
-                energy_cap: 1880000.0 # USD per kWh
+                energy_cap: 1500000.0 # USD per kWh
                 om_annual: 60000.0 # USD/MW
                 om_prod: 0.0 # USD/MWh
             emission:

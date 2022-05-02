@@ -10,7 +10,7 @@ techs:
             resource: inf
             energy_eff: 0.38
             energy_cap_max: inf  # MW
-            lifetime: 40
+            lifetime: 30
         costs:
             monetary:
                 interest_rate: 0.04

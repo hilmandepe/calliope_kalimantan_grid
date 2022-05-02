@@ -1,0 +1,159 @@
+locations:
+
+    # wind_onshore locations
+
+    W1:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:W1
+                    energy_cap_max: 0.0 # MW - insignificant
+
+    W2:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:W2
+                    energy_cap_max: 0.0 # MW - insignificant
+
+    W3:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:W3
+                    energy_cap_max: 0.0 # MW - insignificant
+
+
+    W4:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:W4
+                    energy_cap_max: 0.0 # MW - insignificant
+
+    W5:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:W5
+                    energy_cap_max: 0.0 # MW - insignificant
+
+    W6:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:W6
+                    energy_cap_max: 1010.0 # MW
+
+    W7:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:W7
+                    energy_cap_max: 0.0 # MW insignificant
+
+    C1:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:C1
+                    energy_cap_max: 295.0 # MW
+
+    C2:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:C2
+                    energy_cap_max: 295.0 # MW
+
+    C3:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:C3
+                    energy_cap_max: 295.0 # MW
+
+    C4:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:C4
+                    energy_cap_max: 295.0 # MW
+
+    C5:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:C5
+                    energy_cap_max: 0.0 # MW - insignificant
+
+    S1:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:S1
+                    energy_cap_max: 140.0 # MW
+
+    S2:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:S2
+                    energy_cap_max: 0.0 # MW - insignificant
+
+    S3:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:S3
+                    energy_cap_max: 140.0 # MW
+
+    E1:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:E1
+                    energy_cap_max: 0.0 # MW - insignificant
+
+    E2:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:E2
+                    energy_cap_max: 30.0 # MW
+    E3:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:E3
+                    energy_cap_max: 0.0 # MW - insignificant
+
+    E4:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:E4
+                    energy_cap_max: 0.0 # MW - insignificant
+
+    E5:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:E5
+                    energy_cap_max: 30.0 # MW
+
+    N1:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:N1
+                    energy_cap_max: 0.0 # MW - insignificant
+
+    N2:
+        techs:
+            wind_onshore:
+                constraints:
+                    resource: file=wind_onshore_resource.csv:N2
+                    energy_cap_max: 0.0 # MW - insignificant
+
+    # wind_onshore locations end

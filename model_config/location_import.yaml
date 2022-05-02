@@ -5,9 +5,11 @@ locations:
     W3-IMP:
         techs:
             hydro_import:
+                constraints:
+                    energy_cap_equals: 230 # MW
 
 links:
 
-    W3, W3-IMP:
+    W3-IMP, W3:
         techs:
             hvac_transmission:

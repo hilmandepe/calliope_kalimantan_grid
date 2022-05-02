@@ -1,0 +1,869 @@
+##
+# LOCATIONS
+##
+
+locations:
+
+    W1:
+        coordinates: {lat: 0.8642, lon: 108.9092}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:W1
+            biomass:
+                constraints:
+                    energy_cap_equals: 100.0 #MW
+            coal:
+                constraints:
+                    energy_cap_equals: 350.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 0.16 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    W2:
+        coordinates: {lat: 0.0453, lon: 109.2397}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:W2
+            biomass:
+                constraints:
+                    energy_cap_equals: 66.0 #MW
+            coal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 300.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 133.88 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+
+    W3:
+        coordinates: {lat: 1.1174, lon: 109.5584}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:W3
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 165.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 12.97 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 3.05 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+
+    W4:
+        coordinates: {lat: 0.1775, lon: 110.0471}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:W4
+            biomass:
+                constraints:
+                    energy_cap_equals: 5.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 9.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 70.36 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    W5:
+        coordinates: {lat: 0.0639, lon: 110.9555}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:W5
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 103.57 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 43.7 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    W6:
+        coordinates: {lat: -1.7742, lon: 110.0303}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:W6
+            biomass:
+                constraints:
+                    energy_cap_equals: 14.5 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 49.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 0.3 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 50.99 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    W7:
+        coordinates: {lat: 0.9075, lon: 112.9327}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:W7
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 17.4 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 26.7 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    C1:
+        coordinates: {lat: -2.6152, lon: 111.7037}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:C1
+            biomass:
+                constraints:
+                    energy_cap_equals: 33.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 42.72 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    C2:
+        coordinates: {lat: -2.6221, lon: 112.9154}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:C2
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 50.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 4.67 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    C3:
+        coordinates: {lat: -2.1166, lon: 113.7459}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:C3
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 25.57 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    C4:
+        coordinates: {lat: -2.8550, lon: 114.2790}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:C4
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 12.26 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    C5:
+        coordinates: {lat: -0.7442, lon: 115.0022}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:C5
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 7.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 39.08 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 400.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 0.48 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    S1:
+        coordinates: {lat: -3.4291, lon: 114.7738}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:S1
+            biomass:
+                constraints:
+                    energy_cap_equals: 2.4 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 48.2 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 300.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 30.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 75.85 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    S2:
+        coordinates: {lat: -2.2607, lon: 115.2630}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:S2
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 115.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 13.93 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    S3:
+        coordinates: {lat: -3.5975, lon: 115.7526}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:S3
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 415.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 2.96 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    E1:
+        coordinates: {lat: -1.7614, lon: 116.1132}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:E1
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 14.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 5.21 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    E2:
+        coordinates: {lat: -1.1904, lon: 116.8778}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:E2
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 110.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 81.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 7.29 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    E3:
+        coordinates: {lat: -0.4847, lon: 117.0814}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:E3
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 339.5 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 9.6 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 90.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 145.79 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    E4:
+        coordinates: {lat: 0.3158, lon: 117.5022}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:E4
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 259.00 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 51.28 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 18.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 0.22 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    E5:
+        coordinates: {lat: 1.0533, lon: 116.9215}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:E5
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.81 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 57.63 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 155.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 31.41 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    N1:
+        coordinates: {lat: 3.2988, lon: 116.9458}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:N1
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 160.52 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 90.24 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 24.1 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+    N2:
+        coordinates: {lat: 2.8544, lon: 117.3867}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand_2030.csv:N2
+            biomass:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            coal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            gas:
+                constraints:
+                    energy_cap_equals: 5.0 #MW
+            geothermal:
+                constraints:
+                    energy_cap_equals: 0.0 #MW
+            hydro:
+                constraints:
+                    energy_cap_equals: 300.0 #MW
+            diesel:
+                constraints:
+                    energy_cap_equals: 27.61 #MW
+            battery:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+            pumped_hydro:
+                constraints:
+                    energy_cap_equals: 0.0 # MW
+
+##
+# TRANSMISSION CAPACITIES
+##
+
+links:
+
+    # links between regions
+    W1,W2:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+    W1,W3:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    W2,W4:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    W2,W6:
+        techs:
+            ac_transmission_new:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    W3,W4:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    W4,W5:
+        techs:
+            ac_transmission_new:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    W5,W7:
+        techs:
+            ac_transmission_new:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    W6,C1:
+        techs:
+            ac_transmission_new:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    C1,C2:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    C2,C3:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    C3,C4:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+    C3,C5:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    C4,S1:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    C5,S2:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    C5,E3:
+        techs:
+            ac_transmission_new:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    S1,S2:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    S1,S3:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    S2,S3:
+        techs:
+            ac_transmission_new:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    S2,E1:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    E1,E2:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    E2,E3:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    E3,E4:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    E4,E5:
+        techs:
+            ac_transmission_new:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    E5,N2:
+        techs:
+            ac_transmission_new:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0
+
+    N1,N2:
+        techs:
+            ac_transmission_new:
+                constraints:
+                    energy_cap_max: inf
+                    energy_cap_min: 1.0

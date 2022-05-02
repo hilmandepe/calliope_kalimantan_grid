@@ -15,6 +15,10 @@ scenarios:
     scenario_10_2021: ["electricity_mix_2021","oct2021", "minimize_cost_2021"]
     scenario_11_2021: ["electricity_mix_2021","nov2021", "minimize_cost_2021"]
     scenario_12_2021: ["electricity_mix_2021","dec2021", "minimize_cost_2021"]
+    scenario_2030: ["electricity_mix_2030", "minimize_cost_2030", "low_resolution"]
+    scenario_01_2030: ["electricity_mix_2030", "jan2030", "minimize_cost_2030"]
+    scenario_12_2030: ["electricity_mix_2030", "dec2030", "minimize_cost_2030"]
+
 ##
 # Overrides are the building blocks from which scenarios can be defined
 ##
@@ -51,19 +55,19 @@ overrides:
             hydro_energy_mix:
                 techs: ['hydro']
                 demand_share_max:
-                    power: 0.0200
+                    power: 0.0150
 
             hydro_import_energy_mix:
                 techs: ['hydro_import']
                 demand_share_equals:
-                    power: 0.0680
+                    power: 0.0682
 
 
     jan2021:
-        model.subset_time: ['2021-01-01', '2021-01-31']
+        model.subset_time: ['2021-01-01', '2021-01-07']
 
     feb2021:
-        model.subset_time: ['2021-02-01', '2021-02-07']
+        model.subset_time: ['2021-02-01', '2021-02-28']
 
     mar2021:
         model.subset_time: ['2021-03-01', '2021-03-31']
@@ -95,11 +99,17 @@ overrides:
     dec2021:
         model.subset_time: ['2021-12-01', '2021-12-31']
 
+    jan2030:
+        model.subset_time: ['2030-01-01', '2030-01-31']
+
+    dec2030:
+        model.subset_time: ['2030-12-01', '2030-12-31']
+
     low_resolution:
         model:
             time:
                 function: resample
-                function_options: {'resolution': '6H'}
+                function_options: {'resolution': '2H'}
 
     minimize_cost_2021:
         run:
@@ -107,3 +117,117 @@ overrides:
             objective_options:
                 cost_class: {'monetary': 1, 'emission': 0}
                 sense: minimize
+
+    minimize_cost_2030:
+        run:
+            ensure_feasibility: false
+            objective_options:
+                cost_class: { 'monetary': 1, 'emission': 0 }
+                sense: minimize
+
+    minimize_emissions:
+        run:
+            objective_options:
+                cost_class: { 'monetary': 0, 'emission': 1 }
+                sense: minimize
+
+    electricity_mix_2030:
+
+        group_constraints:
+            biomass_energy_mix:
+                techs: ['biomass']
+                demand_share_max:
+                    power: 0.1000
+
+            coal_energy_mix:
+                techs: ['coal']
+                demand_share_max:
+                    power: 0.5500
+
+            diesel_energy_mix:
+                techs: ['diesel']
+                demand_share_max:
+                    power: 0.1000
+
+            gas_energy_mix:
+                techs: ['gas']
+                demand_share_max:
+                    power: 0.1700
+
+            geothermal_energy_mix:
+                techs: ['geothermal']
+                demand_share_max:
+                    power: 0.0
+
+            hydro_energy_mix:
+                techs: ['hydro']
+                demand_share_max:
+                    power: 0.2300
+
+            hydro_import_energy_mix:
+                techs: ['hydro_import']
+                demand_share_max:
+                    power: 0.0
+
+            solar_energy_mix:
+                techs: [ 'solar' ]
+                demand_share_min:
+                    power: 0.0010
+
+            wind_ons_energy_mix:
+                techs: [ 'wind_onshore' ]
+                demand_share_min:
+                    power: 0.0010
+
+            wind_offs_energy_mix:
+                techs: ['wind_offshore']
+                demand_share_equals:
+                    power: 0.0
+
+    cost_learning_2030:
+
+        group_constraints:
+            biomass_cost_2030:
+                techs: [ 'biomass' ]
+                demand_share_max:
+                    monetary:
+
+            coal_cost_2030:
+                techs: [ 'coal' ]
+                costs:
+                    monetary:
+
+            diesel_cost_2030:
+                techs: [ 'diesel' ]
+                costs:
+                    monetary:
+
+            gas_cost_2030:
+                techs: [ 'gas' ]
+                costs:
+                    monetary:
+
+            geothermal_cost_2030:
+                techs: [ 'geothermal' ]
+                costs:
+                    monetary:
+
+            hydro_cost_2030:
+                techs: [ 'hydro' ]
+                costs:
+                    monetary:
+
+            solar_cost_2030:
+                techs: [ 'solar' ]
+                costs:
+                    monetary:
+
+            wind_ons_cost_2030:
+                techs: [ 'wind_onshore' ]
+                costs:
+                    monetary:
+
+            wind_offs_cost_2030:
+                techs: [ 'wind_offshore' ]
+                costs:
+                    monetary:

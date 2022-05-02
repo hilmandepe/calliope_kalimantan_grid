@@ -3,18 +3,18 @@ techs:
     battery:
         essentials:
             name: 'Li-ion battery storage'
-            color: '#3B61E3'
+            color: '#49666E'
             parent: storage
             carrier: power
         constraints:
-            charge_rate: 0.25 # per hour - assumption
-            energy_cap_max: 100  # MW
-            storage_cap_max: inf
-            energy_eff: 0.92  # 0.92 * 0.92 = 0.85 round trip efficiency
-            storage_loss: 0.0  # No loss over time assumed
-            lifetime: 15
+            energy_cap_per_storage_cap_max: 4.16 # per hour
+            storage_cap_per_unit: 8.0 # MWh/unit
+            energy_eff: 0.96  # 0.96 * 0.96 = 0.92 round trip efficiency
+            storage_loss: 0.000004  # per hour
+            lifetime: 30
         costs:
             monetary:
                 interest_rate: 0.04
-                energy_cap: 1400000.0 # USD/MW
-                storage_cap: 340000.0  # USD/MWh storage capacity
+                storage_cap: 0.157  # USD/MWh storage capacity
+                om_annual: 155 # USD/MWh
+                om_prod: 1.84 # USD/MWH

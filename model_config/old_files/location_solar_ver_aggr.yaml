@@ -1,0 +1,43 @@
+locations:
+
+    # solar pv locations
+
+    # W1-PV1.coordinates: {lat: 2.0070, lon: 109.5970}
+    # W3-PV1.coordinates: {lat: 1.2460, lon: 110.0800}
+    # W4-PV1.coordinates: {lat: -0.2680, lon: 109.8590}
+    # N1-PV1.coordinates: {lat: 3.3040, lon: 117.5950}
+    # N1-PV2.coordinates: {lat: 3.9300, lon: 116.5480} ---
+    # N1-PV3.coordinates: {lat: 4.1470, lon: 117.9090}
+    # N1-PV4.coordinates: {lat: 4.1530, lon: 117.8020}
+    # N1-PV5.coordinates: {lat: 4.0630, lon: 117.0230}
+    # N1-PV6.coordinates: {lat: 4.1880, lon: 117.3410}
+    # N1-PV7.coordinates: {lat: 4.1800, lon: 116.9920}
+
+    W1:
+        techs:
+            solar:
+                constraints:
+                    resource: file=pv_resource.csv:W1
+                    energy_cap_equals: 0.08 # MW
+
+    W3:
+        techs:
+            solar:
+                constraints:
+                    resource: file=pv_resource.csv:W3
+                    energy_cap_equals: 0.04 # MW
+
+    W4:
+        techs:
+            solar:
+                constraints:
+                    resource: file=pv_resource.csv:W4
+                    energy_cap_equals: 0.06 # MW
+
+
+    N1:
+        techs:
+            solar:
+                constraints:
+                    resource: file=pv_resource.csv:N1
+                    energy_cap_equals: 1.04 # MW

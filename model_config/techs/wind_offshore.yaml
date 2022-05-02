@@ -8,7 +8,7 @@ techs:
             carrier_out: power
         constraints:
             resource: file=wind_offhore_resource.csv
-            resource_unit: energy_per_area
+            resource_unit: energy_per_cap
             energy_eff: 1
             resource_area_max: inf
             lifetime: 27

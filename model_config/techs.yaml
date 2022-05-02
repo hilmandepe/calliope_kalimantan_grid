@@ -1,13 +1,17 @@
 import:
-    - 'techs/gas.yaml'
+    - 'techs/battery.yaml'
     - 'techs/biomass.yaml'
     - 'techs/coal.yaml'
     - 'techs/diesel.yaml'
+    - 'techs/gas.yaml'
+    - 'techs/geothermal.yaml'
     - 'techs/hydro.yaml'
     - 'techs/hydro_import.yaml'
-    - 'techs/geothermal.yaml'
+    - 'techs/nuclear.yaml'
+    - 'techs/pumped_hydro.yaml'
     - 'techs/solar.yaml'
-    - 'techs/battery.yaml'
+    - 'techs/wind_offshore.yaml'
+    - 'techs/wind_onshore.yaml'
 
 techs:
 
@@ -39,13 +43,27 @@ techs:
             lifetime: 25
         costs:
             monetary:
-                interest_rate: 0.10
+                interest_rate: 0.04
+                om_prod: 4.8 # USD/MWh
+
+    ac_transmission_new:
+        essentials:
+            name: 'AC power transmission'
+            color: '#FC7628'
+            parent: transmission
+            carrier: power
+        constraints:
+            energy_eff: 0.91
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.04
                 energy_cap: 1.0 # mil USD/MW.km 1 USD = 14500 IDR
                 om_prod: 4.8 # USD/MWh
 
-    free_transmission:
+    dc_transmission:
         essentials:
-            name: 'Local power transmission'
+            name: 'DC power transmission'
             color: '#C9C657'
             parent: transmission
             carrier: power
@@ -67,7 +85,7 @@ techs:
             lifetime: 25
         costs:
             monetary:
-                interest_rate: 0.10
+                interest_rate: 0.04
                 energy_cap: 1.06 # USD/MW.km 1 USD = 14500 IDR
                 om_prod: 11.2 # USD/MWh
     # transmission-end

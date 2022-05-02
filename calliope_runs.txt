@@ -1,1 +1,191 @@
-calliope run model.yaml --scenario=scenario_2021 --save_csv=output/scenario_2021_j --save_plots=output/plot_scenario_2021_j.html
+calliope run model.yaml --scenario=scenario_2021 --save_csv=output/scenario_2021_opt_cost --save_plots=output/plot_scenario_2021_opt_cost.html
+
+calliope run model_2030.yaml --scenario=scenario_2030 --save_csv=output/scenario_2030_opt_cost_base --save_plots=output/plot_scenario_2030_opt_cost_base.html
+
+calliope run model_future.yaml --scenario=scenario_01_2030 --save_csv=output/scenario_01_2030_test --save_plots=output/plot_scenario_01_2030_test.html
+
+
+
+
+
+    solar_pv_2030:
+        group_constraints:
+            solar_W1_2030:
+                techs: ['solar']
+                locs: [ 'W1' ]
+                energy_cap_equals: 30.08
+            solar_W2_2030:
+                techs: [ 'solar' ]
+                locs: [ 'W2' ]
+                energy_cap_equals: 0.0
+            solar_W3_2030:
+                techs: [ 'solar' ]
+                locs: [ 'W3' ]
+                energy_cap_equals: 23.14
+            solar_W4_2030:
+                techs: [ 'solar' ]
+                locs: [ 'W4' ]
+                energy_cap_equals: 13.66
+            solar_W5_2030:
+                techs: [ 'solar' ]
+                locs: [ 'W5' ]
+                energy_cap_equals: 69.84
+            solar_W6_2030:
+                techs: [ 'solar' ]
+                locs: [ 'W6' ]
+                energy_cap_equals: 22.5
+            solar_W7_2030:
+                techs: [ 'solar' ]
+                locs: [ 'W7' ]
+                energy_cap_equals: 10.5
+            solar_C1_2030:
+                techs: [ 'solar' ]
+                locs: [ 'C1' ]
+                energy_cap_equals: 9.83
+            solar_C2_2030:
+                techs: [ 'solar' ]
+                locs: [ 'C2' ]
+                energy_cap_equals: 0.0
+            solar_C3_2030:
+                techs: [ 'solar' ]
+                locs: [ 'C3' ]
+                energy_cap_equals: 5.7
+            solar_C4_2030:
+                techs: [ 'solar' ]
+                locs: [ 'C4' ]
+                energy_cap_equals: 0.0
+            solar_C5_2030:
+                techs: [ 'solar' ]
+                locs: [ 'C5' ]
+                energy_cap_equals: 8.67
+            solar_S1_2030:
+                techs: [ 'solar' ]
+                locs: [ 'S1' ]
+                energy_cap_equals: 0.0
+            solar_S2_2030:
+                techs: [ 'solar' ]
+                locs: [ 'S2' ]
+                energy_cap_equals: 0.0
+            solar_S3_2030:
+                techs: [ 'solar' ]
+                locs: [ 'S3' ]
+                energy_cap_equals: 7.45
+            solar_E1_2030:
+                techs: [ 'solar' ]
+                locs: [ 'E1' ]
+                energy_cap_equals: 3.2
+            solar_E2_2030:
+                techs: [ 'solar' ]
+                locs: [ 'E2' ]
+                energy_cap_equals: 5.1
+            solar_E3_2030:
+                techs: [ 'solar' ]
+                locs: [ 'E3' ]
+                energy_cap_equals: 57.2
+            solar_E4_2030:
+                techs: [ 'solar' ]
+                locs: [ 'E4' ]
+                energy_cap_equals: 24.81
+            solar_E5_2030:
+                techs: [ 'solar' ]
+                locs: [ 'E5' ]
+                energy_cap_equals: 5.5
+            solar_N1_2030:
+                techs: [ 'solar' ]
+                locs: [ 'N1' ]
+                energy_cap_equals: 4.15
+            solar_N2_2030:
+                techs: [ 'solar' ]
+                locs: [ 'N2' ]
+                energy_cap_equals: 5.74
+
+    wind_ons_2030:
+        group_constraints:
+            wind_onshore_W1_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'W1' ]
+                energy_cap_equals: 0.0
+            wind_onshore_W2_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'W2' ]
+                energy_cap_equals: 0.0
+            wind_onshore_W3_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'W3' ]
+                energy_cap_equals: 0.0
+            wind_onshore_W4_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'W4' ]
+                energy_cap_equals: 0.0
+            wind_onshore_W5_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'W5' ]
+                energy_cap_equals: 0.0
+            wind_onshore_W6_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'W6' ]
+                energy_cap_equals: 0.0
+            wind_onshore_W7_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'W7' ]
+                energy_cap_equals: 0.0
+            wind_onshore_C1_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'C1' ]
+                energy_cap_equals: 0.0
+            wind_onshore_C2_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'C2' ]
+                energy_cap_equals: 0.0
+            wind_onshore_C3_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'C3' ]
+                energy_cap_equals: 0.0
+            wind_onshore_C4_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'C4' ]
+                energy_cap_equals: 0.0
+            wind_onshore_C5_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'C5' ]
+                energy_cap_equals: 0.0
+            wind_onshore_S1_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'S1' ]
+                energy_cap_equals: 30.0
+            wind_onshore_S2_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'S2' ]
+                energy_cap_equals: 0.0
+            wind_onshore_S3_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'S3' ]
+                energy_cap_equals: 40.0
+            wind_onshore_E1_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'E1' ]
+                energy_cap_equals: 0.0
+            wind_onshore_E2_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'E2' ]
+                energy_cap_equals: 0.0
+            wind_onshore_E3_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'E3' ]
+                energy_cap_equals: 0.0
+            wind_onshore_E4_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'E4' ]
+                energy_cap_equals: 0.0
+            wind_onshore_E5_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'E5' ]
+                energy_cap_equals: 0.0
+            wind_onshore_N1_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'N1' ]
+                energy_cap_equals: 0.0
+            wind_onshore_N2_2030:
+                techs: [ 'wind_onshore' ]
+                locs: [ 'N2' ]
+                energy_cap_equals: 0.0

@@ -8,7 +8,7 @@ techs:
             carrier_out: power
         constraints:
             resource: inf
-            energy_eff: 1
+            energy_eff: 0.12
             energy_cap_max: inf  # MW
             lifetime: 30
         costs:
