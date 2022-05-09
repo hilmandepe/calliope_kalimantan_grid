@@ -1,8 +1,8 @@
 import:  # Import other files from paths relative to this file, or absolute paths
     - 'model_config/techs.yaml'  # This file specifies the model's technologies
-    - 'model_config/locations_future.yaml'  # This file specifies the model's locations
+    - 'model_config/locations_2030.yaml'  # This file specifies the model's locations
     - 'model_config/location_solar_2030.yaml'  # This file specifies the solar pv locations
-    - 'model_config/location_windoffs_2050.yaml'  # This file specifies the solar pv locations
+    - 'model_config/location_windoffs_2030.yaml'  # This file specifies the solar pv locations
     - 'model_config/location_windons_2030.yaml'  # This file specifies the solar pv locations
     - 'model_config/location_import.yaml'  # This file specifies the import source
     - 'scenarios.yaml'  # Scenario and override group definitions

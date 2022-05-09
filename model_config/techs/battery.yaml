@@ -7,14 +7,18 @@ techs:
             parent: storage
             carrier: power
         constraints:
-            energy_cap_per_storage_cap_max: 4.16 # per hour
-            storage_cap_per_unit: 8.0 # MWh/unit
+            energy_cap_per_storage_cap_max: 0.24 # per hour
+            energy_cap_max: 300 # MW Moss Landing
+            storage_cap_max: 1200 # MWh Moss Landing
             energy_eff: 0.96  # 0.96 * 0.96 = 0.92 round trip efficiency
             storage_loss: 0.000004  # per hour
-            lifetime: 30
+            lifetime: 20
         costs:
             monetary:
                 interest_rate: 0.04
-                storage_cap: 0.157  # USD/MWh storage capacity
-                om_annual: 155 # USD/MWh
+                energy_cap: 360000.0 # USD/MW
+                storage_cap: 157000.0  # USD/MWh storage capacity 2050
+                om_annual: 155.0 # USD/MWh
                 om_prod: 1.84 # USD/MWH
+            emission:
+                om_prod: 0.0 # kgCO2eq/MWh

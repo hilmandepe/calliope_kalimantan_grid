@@ -16,6 +16,6 @@ techs:
                 interest_rate: 0.04
                 energy_cap: 1150000.0 # USD/MW
                 om_annual: 41200.0 # USD/MW
-                om_con: 11.3 # USD/MWh - subsidized coal price 3.14 USD/GJ
+                om_con: 11.3 # USD/MWh - subsidized coal price 3.14 USD/GJ IESR
             emission:
                 om_prod: 849.0 # kgCO2eq/MWh

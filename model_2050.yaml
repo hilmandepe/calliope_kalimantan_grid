@@ -1,10 +1,9 @@
 import:  # Import other files from paths relative to this file, or absolute paths
     - 'model_config/techs.yaml'  # This file specifies the model's technologies
-    - 'model_config/locations_future.yaml'  # This file specifies the model's locations
-    - 'model_config/location_solar_2030.yaml'  # This file specifies the solar pv locations
+    - 'model_config/locations_2050.yaml'  # This file specifies the model's locations
+    - 'model_config/location_solar_2050.yaml'  # This file specifies the solar pv locations
     - 'model_config/location_windoffs_2050.yaml'  # This file specifies the solar pv locations
-    - 'model_config/location_windons_2030.yaml'  # This file specifies the solar pv locations
-    - 'model_config/location_import.yaml'  # This file specifies the import source
+    - 'model_config/location_windons_2050.yaml'  # This file specifies the solar pv locations
     - 'scenarios.yaml'  # Scenario and override group definitions
 
 # Model configuration: all settings that affect the built model
@@ -17,7 +16,7 @@ model:
     # Time series data path - can either be a path relative to this file, or an absolute path
     timeseries_data_path: 'timeseries_data'
 
-    subset_time: ['2030-01-01', '2030-12-31']  # Subset of timesteps
+    subset_time: ['2050-01-01', '2050-12-31']  # Subset of timesteps
 
 # Run configuration: all settings that affect how the built model is run
 run:

@@ -3,6 +3,8 @@
 ##
 scenarios:
     scenario_2021: ["electricity_mix_2021", "minimize_cost_2021"]
+    scenario_2021_2H_nosub: ["electricity_mix_2021", "minimize_cost_2021", "low_resolution", "no_coal_subsidy"]
+    scenario_2021_2H: ["electricity_mix_2021", "minimize_cost_2021", "low_resolution"]
     scenario_01_2021: ["electricity_mix_2021","jan2021", "minimize_cost_2021"]
     scenario_02_2021: ["electricity_mix_2021","feb2021", "minimize_cost_2021"]
     scenario_03_2021: ["electricity_mix_2021","mar2021", "minimize_cost_2021"]
@@ -15,9 +17,26 @@ scenarios:
     scenario_10_2021: ["electricity_mix_2021","oct2021", "minimize_cost_2021"]
     scenario_11_2021: ["electricity_mix_2021","nov2021", "minimize_cost_2021"]
     scenario_12_2021: ["electricity_mix_2021","dec2021", "minimize_cost_2021"]
+
     scenario_2030: ["electricity_mix_2030", "minimize_cost_2030", "low_resolution"]
-    scenario_01_2030: ["electricity_mix_2030", "jan2030", "minimize_cost_2030"]
+    scenario_2030_emissions: ["minimize_emissions", "electricity_cap_2030", "low_resolution"]
+    scenario_2030_moderate: ["moderate", "electricity_cap_2030", "low_resolution"]
+    scenario_2030_learning: ["electricity_mix_2030", "minimize_cost_2030", "low_resolution", "cost_learning_2030"]
+    scenario_2030_lear_nosub: ["electricity_mix_2030", "minimize_cost_2030", "low_resolution", "cost_learning_2030", "no_coal_subsidy"]
+    scenario_2030_emis_learning: ["minimize_emissions", "electricity_cap_2030", "low_resolution", "cost_learning_2030"]
+    scenario_2030_emis_lear_nosub: ["minimize_emissions", "electricity_cap_2030", "low_resolution", "cost_learning_2030", "no_coal_subsidy"]
+    scenario_01_2030: ["electricity_mix_2030", "jan2030", "minimize_cost_2030", "cost_learning_2030"]
     scenario_12_2030: ["electricity_mix_2030", "dec2030", "minimize_cost_2030"]
+    scenario_01_2030_emissions: ["jan2030", "electricity_cap_2030", "minimize_emissions",
+                                 "cost_learning_2030"]
+    scenario_2050: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy"]
+    scenario_2050_nole: ["minimize_cost_2050", "low_resolution", "electricity_cap_2050", "no_coal_subsidy"]
+    scenario_2050_emissions: [ "minimize_emissions", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy"]
+    scenario_2050_emissions_nole: [ "minimize_emissions", "low_resolution", "electricity_cap_2050", "no_coal_subsidy"]
+    scenario_01_2050: ["jan2050", "minimize_cost_2050", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy"]
+    scenario_07_2050: ["jul2050", "minimize_cost_2050", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy"]
+    scenario_01_2050_emissions: ["jan2050", "minimize_emissions", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy"]
+    scenario_07_2050_emissions: ["jul2050", "minimize_emissions", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy"]
 
 ##
 # Overrides are the building blocks from which scenarios can be defined
@@ -64,7 +83,7 @@ overrides:
 
 
     jan2021:
-        model.subset_time: ['2021-01-01', '2021-01-07']
+        model.subset_time: ['2021-01-01', '2021-01-31']
 
     feb2021:
         model.subset_time: ['2021-02-01', '2021-02-28']
@@ -105,6 +124,12 @@ overrides:
     dec2030:
         model.subset_time: ['2030-12-01', '2030-12-31']
 
+    jan2050:
+        model.subset_time: ['2050-01-01', '2050-01-31']
+
+    jul2050:
+        model.subset_time: [ '2050-07-01', '2050-07-31' ]
+
     low_resolution:
         model:
             time:
@@ -125,10 +150,25 @@ overrides:
                 cost_class: { 'monetary': 1, 'emission': 0 }
                 sense: minimize
 
+    minimize_cost_2050:
+        run:
+            ensure_feasibility: false
+            objective_options:
+                cost_class: { 'monetary': 1, 'emission': 0 }
+                sense: minimize
+
     minimize_emissions:
         run:
+            ensure_feasibility: false
             objective_options:
                 cost_class: { 'monetary': 0, 'emission': 1 }
+                sense: minimize
+
+    moderate:
+        run:
+            ensure_feasibility: false
+            objective_options:
+                cost_class: { 'monetary': 0.5, 'emission': 0.5 }
                 sense: minimize
 
     electricity_mix_2030:
@@ -137,12 +177,12 @@ overrides:
             biomass_energy_mix:
                 techs: ['biomass']
                 demand_share_max:
-                    power: 0.1000
+                    power: 0.0650
 
             coal_energy_mix:
                 techs: ['coal']
                 demand_share_max:
-                    power: 0.5500
+                    power: 0.5250
 
             diesel_energy_mix:
                 techs: ['diesel']
@@ -162,7 +202,7 @@ overrides:
             hydro_energy_mix:
                 techs: ['hydro']
                 demand_share_max:
-                    power: 0.2300
+                    power: 0.2500
 
             hydro_import_energy_mix:
                 techs: ['hydro_import']
@@ -184,50 +224,141 @@ overrides:
                 demand_share_equals:
                     power: 0.0
 
-    cost_learning_2030:
+    electricity_cap_2030:
 
         group_constraints:
-            biomass_cost_2030:
+            biomass_energy_mix:
                 techs: [ 'biomass' ]
                 demand_share_max:
-                    monetary:
+                    power: 0.065
 
-            coal_cost_2030:
+            coal_energy_mix:
                 techs: [ 'coal' ]
-                costs:
-                    monetary:
+                demand_share_max:
+                    power: 0.58
 
-            diesel_cost_2030:
+            diesel_energy_mix:
                 techs: [ 'diesel' ]
-                costs:
-                    monetary:
+                demand_share_max:
+                    power: 0.21
 
-            gas_cost_2030:
+            gas_energy_mix:
                 techs: [ 'gas' ]
-                costs:
-                    monetary:
+                demand_share_max:
+                    power: 0.29
 
-            geothermal_cost_2030:
+            geothermal_energy_mix:
                 techs: [ 'geothermal' ]
-                costs:
-                    monetary:
+                demand_share_equals:
+                    power: 0.0
 
-            hydro_cost_2030:
+            hydro_energy_mix:
                 techs: [ 'hydro' ]
-                costs:
-                    monetary:
+                demand_share_max:
+                    power: 0.36
 
-            solar_cost_2030:
+            hydro_import_energy_mix:
+                techs: [ 'hydro_import' ]
+                demand_share_equals:
+                    power: 0.0
+
+            solar_energy_mix:
                 techs: [ 'solar' ]
-                costs:
-                    monetary:
+                demand_share_min:
+                    power: 0.0
 
-            wind_ons_cost_2030:
+            wind_ons_energy_mix:
                 techs: [ 'wind_onshore' ]
-                costs:
-                    monetary:
+                demand_share_min:
+                    power: 0.0
 
-            wind_offs_cost_2030:
+            wind_offs_energy_mix:
                 techs: [ 'wind_offshore' ]
-                costs:
-                    monetary:
+                demand_share_equals:
+                    power: 0.0
+
+    no_coal_subsidy:
+        techs.coal.costs.monetary.om_con: 20.34
+
+    cost_learning_2030:
+        techs.solar.costs.monetary.energy_cap: 560000.0
+        techs.solar.costs.monetary.om_annual: 10000.0
+        techs.wind_onshore.costs.monetary.energy_cap: 1280000.0
+        techs.wind_onshore.costs.monetary.om_annual: 51000.0
+        techs.wind_offshore.costs.monetary.energy_cap: 2980000.0
+        techs.wind_offshore.costs.monetary.om_annual: 61700.0
+
+    cost_learning_2050:
+        techs.solar.costs.monetary.energy_cap: 410000.0
+        techs.solar.costs.monetary.om_annual: 8000.0
+        techs.wind_onshore.costs.monetary.energy_cap: 1080000.0
+        techs.wind_onshore.costs.monetary.om_annual: 43200.0
+        techs.wind_offshore.costs.monetary.energy_cap: 2520000.0
+        techs.wind_offshore.costs.monetary.om_annual: 52300.0
+
+        techs.biomass.costs.monetary.energy_cap: 1600000.0
+        techs.biomass.costs.monetary.om_annual: 38100.0
+        techs.coal.costs.monetary.energy_cap: 990000.0
+        techs.coal.costs.monetary.om_annual: 38700.0
+        techs.diesel.costs.monetary.energy_cap: 780000.0
+        techs.diesel.costs.monetary.om_annual: 7760.0
+        techs.gas.costs.monetary.energy_cap: 610000.0
+        techs.gas.costs.monetary.om_annual: 22100.0
+        techs.hydro.costs.monetary.energy_cap: 1850000.0
+        techs.hydro.costs.monetary.om_annual: 33600.0
+
+    electricity_cap_2050:
+
+        group_constraints:
+            biomass_energy_mix:
+                techs: [ 'biomass' ]
+                demand_share_max:
+                    power: 0.13
+
+            coal_energy_mix:
+                techs: [ 'coal' ]
+                demand_share_max:
+                    power: 0.15
+
+            diesel_energy_mix:
+                techs: [ 'diesel' ]
+                demand_share_max:
+                    power: 0.0
+
+            gas_energy_mix:
+                techs: [ 'gas' ]
+                demand_share_max:
+                    power: 0.20
+
+            geothermal_energy_mix:
+                techs: [ 'geothermal' ]
+                demand_share_max:
+                    power: 0.009
+
+            hydro_energy_mix:
+                techs: [ 'hydro' ]
+                demand_share_max:
+                    power: 0.60
+
+            nuclear_energy_mix:
+                techs: [ 'hydro_import' ]
+                demand_share_max:
+                    power: 0.07
+
+            solar_energy_mix:
+                techs: [ 'solar' ]
+                demand_share_max:
+                    power: 0.9
+
+            wind_ons_energy_mix:
+                techs: [ 'wind_onshore' ]
+                demand_share_max:
+                    power: 0.9
+
+            wind_offs_energy_mix:
+                techs: [ 'wind_offshore' ]
+                demand_share_max:
+                    power: 0.9
+
+    storage_cap_2050:
+        techs.battery.constraints.energy_cap_equals: inf
