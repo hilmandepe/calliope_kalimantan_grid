@@ -4,7 +4,6 @@ import:  # Import other files from paths relative to this file, or absolute path
     - 'model_config/location_solar_2030.yaml'  # This file specifies the solar pv locations
     - 'model_config/location_windoffs_2030.yaml'  # This file specifies the solar pv locations
     - 'model_config/location_windons_2030.yaml'  # This file specifies the solar pv locations
-    - 'model_config/location_import.yaml'  # This file specifies the import source
     - 'scenarios.yaml'  # Scenario and override group definitions
 
 # Model configuration: all settings that affect the built model

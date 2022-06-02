@@ -6,7 +6,7 @@ locations:
         techs:
             hydro_import:
                 constraints:
-                    energy_cap_equals: 230 # MW
+                    energy_cap_equals: 170 # MW - renewed agreement
 
 links:
 

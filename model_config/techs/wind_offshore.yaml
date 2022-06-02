@@ -3,7 +3,7 @@ techs:
     wind_offshore:
         essentials:
             name: 'Offshore wind turbine'
-            color: '#3272B2'
+            color: '#DB1C02'
             parent: supply_plus
             carrier_out: power
         constraints:

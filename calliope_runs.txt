@@ -1,20 +1,38 @@
-calliope run model.yaml --scenario=scenario_2021_2H_nosub --save_csv=output/scenario_2021_opt_cost_ncs --save_plots=output/plot_scenario_2021_opt_cost_ncs.html
+calliope run model.yaml --scenario=scenario_2021 --save_csv=output/scenario_2021_opt_cost --save_plots=output/plot_scenario_2021_opt_cost.html
 
-calliope run model_2030.yaml --scenario=scenario_2030_learning --save_csv=output/scenario_2030_opt_cost_learn --save_plots=output/plot_scenario_2030_opt_cost_learn.html
+calliope run model.yaml --scenario=scenario_2021_2H_nosub --save_csv=output/scenario_2021_opt_cost_ncs_2h --save_plots=output/plot_scenario_2021_opt_cost_ncs_2h.html
 
-calliope run model_2030.yaml --scenario=scenario_2030_emis_learning --save_csv=output/scenario_2030_opt_emis_learn --save_plots=output/plot_scenario_2030_opt_emis_learn.html
+calliope run model_2030.yaml --scenario=scenario_2030_learning --save_csv=output/scenario_2030_opt_cost_2ha --save_plots=output/plot_scenario_2030_opt_cost_2ha.html
 
-calliope run model_2030.yaml --scenario=scenario_2030_lear_nosub --save_csv=output/scenario_2030_opt_cost_ncs --save_plots=output/plot_scenario_2030_opt_cost_ncs.html
+calliope run model_2030.yaml --scenario=scenario_2030_emis_learning --save_csv=output/scenario_2030_opt_emis_2h --save_plots=output/plot_scenario_2030_opt_emis_2h.html
 
-calliope run model_2030.yaml --scenario=scenario_2030_emis_lear_nosub --save_csv=output/scenario_2030_opt_emis_ncs --save_plots=output/plot_scenario_2030_opt_emis_ncs.html
+calliope run model_2030.yaml --scenario=scenario_2030_lear_nosub --save_csv=output/scenario_2030_opt_cost_ncs_2h --save_plots=output/plot_scenario_2030_opt_cost_ncs_2h.html
+
+calliope run model_2030.yaml --scenario=scenario_2030_emis_lear_nosub --save_csv=output/scenario_2030_opt_emis_ncs_2h --save_plots=output/plot_scenario_2030_opt_emis_ncs_2h.html
 
 calliope run model_2030.yaml --scenario=scenario_01_2030 --save_csv=output/scenario_01_2030_test --save_plots=output/plot_scenario_01_2030_test.html
 
 calliope run model_2030.yaml --scenario=scenario_01_2030 --save_csv=output/scenario_01_2030_test --save_plots=output/plot_scenario_01_2030_test.html
 
-calliope run model_2050.yaml --scenario=scenario_2050_nole --save_csv=output/scenario_2050_opt_cost_base --save_plots=output/plot_scenario_2050_opt_cost_base.html
+calliope run model_2050.yaml --scenario=scenario_2050 --save_csv=output/scenario_2050_opt_cost_2hA --save_plots=output/plot_scenario_2050_opt_cost_2hA.html
 
-calliope run model_2050.yaml --scenario=scenario_2050_emissions_nole --save_csv=output/scenario_2050_opt_emis_base --save_plots=output/plot_scenario_2050_opt_emis_base.html
+calliope run model_2050.yaml --scenario=scenario_2050_emissions --save_csv=output/scenario_2050_opt_emis_2hB --save_plots=output/plot_scenario_2050_opt_emis_2hB.html
+
+calliope run model_2050.yaml --scenario=scenario_2050_nosub --save_csv=output/scenario_2050_opt_cost_ncs_2h --save_plots=output/plot_scenario_2050_opt_cost_ncs_2h.html
+
+
+
+calliope run model.yaml --scenario=scenario_2021_steep --save_csv=output/scenario_2021_steep --save_plots=output/plot_scenario_2021_steep.html
+
+calliope run model.yaml --scenario=scenario_2021_flat --save_csv=output/scenario_2021_flat --save_plots=output/plot_scenario_2021_flat.html
+
+calliope run model_2030.yaml --scenario=scenario_2030_steep --save_csv=output/scenario_2030_steep --save_plots=output/plot_scenario_2030_steep.html
+
+calliope run model_2030.yaml --scenario=scenario_2030_flat --save_csv=output/scenario_2030_flat --save_plots=output/plot_scenario_2030_flat.html
+
+calliope run model_2050.yaml --scenario=scenario_2050_steep --save_csv=output/scenario_2050_steep --save_plots=output/plot_scenario_2050_steep.html
+
+calliope run model_2050.yaml --scenario=scenario_2050_flat --save_csv=output/scenario_2050_flat --save_plots=output/plot_scenario_2050_flat.html
 
 
 

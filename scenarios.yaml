@@ -29,14 +29,25 @@ scenarios:
     scenario_12_2030: ["electricity_mix_2030", "dec2030", "minimize_cost_2030"]
     scenario_01_2030_emissions: ["jan2030", "electricity_cap_2030", "minimize_emissions",
                                  "cost_learning_2030"]
-    scenario_2050: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy"]
+    scenario_2050: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050"]
+    scenario_2050_nosub: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy"]
     scenario_2050_nole: ["minimize_cost_2050", "low_resolution", "electricity_cap_2050", "no_coal_subsidy"]
-    scenario_2050_emissions: [ "minimize_emissions", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy"]
+    scenario_2050_emissions: [ "minimize_emissions", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy", "run_orno_coal"]
     scenario_2050_emissions_nole: [ "minimize_emissions", "low_resolution", "electricity_cap_2050", "no_coal_subsidy"]
     scenario_01_2050: ["jan2050", "minimize_cost_2050", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy"]
     scenario_07_2050: ["jul2050", "minimize_cost_2050", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy"]
     scenario_01_2050_emissions: ["jan2050", "minimize_emissions", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy"]
     scenario_07_2050_emissions: ["jul2050", "minimize_emissions", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy"]
+
+    scenario_01_2050_steep: ["jan2050", "minimize_cost_2050", "cost_learning_2050", "electricity_cap_2050", "steep_2050"]
+    scenario_01_2050_flat: ["jan2050", "minimize_cost_2050", "cost_learning_2050", "electricity_cap_2050", "flat_2050"]
+
+    scenario_2050_steep: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "steep_2050"]
+    scenario_2050_flat: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "flat_2050"]
+    scenario_2030_steep: ["electricity_mix_2030", "minimize_cost_2030", "low_resolution", "cost_learning_2030", "steep_2030"]
+    scenario_2030_flat: ["electricity_mix_2030", "minimize_cost_2030", "low_resolution", "cost_learning_2030", "flat_2030"]
+    scenario_2021_steep: ["minimize_cost_2021", "low_resolution", "steep_2021"]
+    scenario_2021_flat: ["electricity_mix_2021", "minimize_cost_2021", "low_resolution", "flat_2021"]
 
 ##
 # Overrides are the building blocks from which scenarios can be defined
@@ -49,22 +60,22 @@ overrides:
             biomass_energy_mix:
                 techs: ['biomass']
                 demand_share_max:
-                    power: 0.0100
+                    power: 0.0150
 
             coal_energy_mix:
                 techs: ['coal']
                 demand_share_max:
-                    power: 0.6900
+                    power: 0.6950
 
             diesel_energy_mix:
                 techs: ['diesel']
                 demand_share_max:
-                    power: 0.0750
+                    power: 0.0850
 
             gas_energy_mix:
                 techs: ['gas']
                 demand_share_max:
-                    power: 0.1750
+                    power: 0.2000
 
             geothermal_energy_mix:
                 techs: ['geothermal']
@@ -74,13 +85,12 @@ overrides:
             hydro_energy_mix:
                 techs: ['hydro']
                 demand_share_max:
-                    power: 0.0150
+                    power: 0.0200
 
             hydro_import_energy_mix:
                 techs: ['hydro_import']
-                demand_share_equals:
-                    power: 0.0682
-
+                demand_share_max:
+                    power: 0.0700
 
     jan2021:
         model.subset_time: ['2021-01-01', '2021-01-31']
@@ -125,7 +135,7 @@ overrides:
         model.subset_time: ['2030-12-01', '2030-12-31']
 
     jan2050:
-        model.subset_time: ['2050-01-01', '2050-01-31']
+        model.subset_time: ['2050-01-01', '2050-01-07']
 
     jul2050:
         model.subset_time: [ '2050-07-01', '2050-07-31' ]
@@ -145,14 +155,14 @@ overrides:
 
     minimize_cost_2030:
         run:
-            ensure_feasibility: false
+            ensure_feasibility: true
             objective_options:
                 cost_class: { 'monetary': 1, 'emission': 0 }
                 sense: minimize
 
     minimize_cost_2050:
         run:
-            ensure_feasibility: false
+            ensure_feasibility: true
             objective_options:
                 cost_class: { 'monetary': 1, 'emission': 0 }
                 sense: minimize
@@ -182,17 +192,17 @@ overrides:
             coal_energy_mix:
                 techs: ['coal']
                 demand_share_max:
-                    power: 0.5250
+                    power: 0.5400
 
             diesel_energy_mix:
                 techs: ['diesel']
                 demand_share_max:
-                    power: 0.1000
+                    power: 0.0100
 
             gas_energy_mix:
                 techs: ['gas']
                 demand_share_max:
-                    power: 0.1700
+                    power: 0.2900
 
             geothermal_energy_mix:
                 techs: ['geothermal']
@@ -230,22 +240,22 @@ overrides:
             biomass_energy_mix:
                 techs: [ 'biomass' ]
                 demand_share_max:
-                    power: 0.065
+                    power: 0.0650
 
             coal_energy_mix:
                 techs: [ 'coal' ]
                 demand_share_max:
-                    power: 0.58
+                    power: 0.5800
 
             diesel_energy_mix:
                 techs: [ 'diesel' ]
                 demand_share_max:
-                    power: 0.21
+                    power: 0.2100
 
             gas_energy_mix:
                 techs: [ 'gas' ]
                 demand_share_max:
-                    power: 0.29
+                    power: 0.2900
 
             geothermal_energy_mix:
                 techs: [ 'geothermal' ]
@@ -255,7 +265,7 @@ overrides:
             hydro_energy_mix:
                 techs: [ 'hydro' ]
                 demand_share_max:
-                    power: 0.36
+                    power: 0.3600
 
             hydro_import_energy_mix:
                 techs: [ 'hydro_import' ]
@@ -341,9 +351,9 @@ overrides:
                     power: 0.60
 
             nuclear_energy_mix:
-                techs: [ 'hydro_import' ]
+                techs: [ 'nuclear' ]
                 demand_share_max:
-                    power: 0.07
+                    power: 0.08
 
             solar_energy_mix:
                 techs: [ 'solar' ]
@@ -360,5 +370,148 @@ overrides:
                 demand_share_max:
                     power: 0.9
 
-    storage_cap_2050:
-        techs.battery.constraints.energy_cap_equals: inf
+    run_orno_coal:
+        techs.coal.constraints.energy_ramping: 0.00000000000001
+
+    run_orno_diesel:
+        techs.diesel.constraints.energy_ramping: 0.00000000001
+
+    steep_2050:
+        locations.W1.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:W1
+        locations.W2.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:W2
+        locations.W3.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:W3
+        locations.W4.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:W4
+        locations.W5.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:W5
+        locations.W6.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:W6
+        locations.W7.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:W7
+        locations.C1.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:C1
+        locations.C2.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:C2
+        locations.C3.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:C3
+        locations.C4.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:C4
+        locations.C5.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:C5
+        locations.S1.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:S1
+        locations.S2.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:S2
+        locations.S3.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:S3
+        locations.E1.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:E1
+        locations.E2.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:E2
+        locations.E3.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:E3
+        locations.E4.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:E4
+        locations.E5.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:E5
+        locations.N1.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:N1
+        locations.N2.techs.demand_power.constraints.resource: file=demand_2050_steep.csv:N2
+
+    flat_2050:
+        locations.W1.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:W1
+        locations.W2.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:W2
+        locations.W3.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:W3
+        locations.W4.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:W4
+        locations.W5.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:W5
+        locations.W6.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:W6
+        locations.W7.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:W7
+        locations.C1.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:C1
+        locations.C2.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:C2
+        locations.C3.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:C3
+        locations.C4.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:C4
+        locations.C5.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:C5
+        locations.S1.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:S1
+        locations.S2.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:S2
+        locations.S3.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:S3
+        locations.E1.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:E1
+        locations.E2.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:E2
+        locations.E3.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:E3
+        locations.E4.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:E4
+        locations.E5.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:E5
+        locations.N1.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:N1
+        locations.N2.techs.demand_power.constraints.resource: file=demand_2050_flat.csv:N2
+
+    steep_2030:
+        locations.W1.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:W1
+        locations.W2.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:W2
+        locations.W3.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:W3
+        locations.W4.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:W4
+        locations.W5.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:W5
+        locations.W6.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:W6
+        locations.W7.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:W7
+        locations.C1.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:C1
+        locations.C2.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:C2
+        locations.C3.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:C3
+        locations.C4.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:C4
+        locations.C5.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:C5
+        locations.S1.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:S1
+        locations.S2.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:S2
+        locations.S3.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:S3
+        locations.E1.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:E1
+        locations.E2.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:E2
+        locations.E3.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:E3
+        locations.E4.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:E4
+        locations.E5.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:E5
+        locations.N1.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:N1
+        locations.N2.techs.demand_power.constraints.resource: file=demand_2030_steep.csv:N2
+
+    flat_2030:
+        locations.W1.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:W1
+        locations.W2.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:W2
+        locations.W3.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:W3
+        locations.W4.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:W4
+        locations.W5.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:W5
+        locations.W6.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:W6
+        locations.W7.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:W7
+        locations.C1.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:C1
+        locations.C2.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:C2
+        locations.C3.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:C3
+        locations.C4.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:C4
+        locations.C5.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:C5
+        locations.S1.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:S1
+        locations.S2.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:S2
+        locations.S3.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:S3
+        locations.E1.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:E1
+        locations.E2.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:E2
+        locations.E3.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:E3
+        locations.E4.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:E4
+        locations.E5.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:E5
+        locations.N1.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:N1
+        locations.N2.techs.demand_power.constraints.resource: file=demand_2030_flat.csv:N2
+
+    steep_2021:
+        locations.W1.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:W1
+        locations.W2.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:W2
+        locations.W3.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:W3
+        locations.W4.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:W4
+        locations.W5.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:W5
+        locations.W6.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:W6
+        locations.C1.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:C1
+        locations.C2.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:C2
+        locations.C3.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:C3
+        locations.C4.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:C4
+        locations.C5.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:C5
+        locations.S1.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:S1
+        locations.S2.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:S2
+        locations.S3.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:S3
+        locations.E1.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:E1
+        locations.E2.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:E2
+        locations.E3.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:E3
+        locations.E4.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:E4
+        locations.E5.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:E5
+        locations.N1.techs.demand_power.constraints.resource: file=demand_2021_steep.csv:N1
+
+    flat_2021:
+        locations.W1.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:W1
+        locations.W2.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:W2
+        locations.W3.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:W3
+        locations.W4.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:W4
+        locations.W5.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:W5
+        locations.W6.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:W6
+        locations.C1.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:C1
+        locations.C2.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:C2
+        locations.C3.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:C3
+        locations.C4.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:C4
+        locations.C5.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:C5
+        locations.S1.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:S1
+        locations.S2.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:S2
+        locations.S3.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:S3
+        locations.E1.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:E1
+        locations.E2.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:E2
+        locations.E3.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:E3
+        locations.E4.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:E4
+        locations.E5.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:E5
+        locations.N1.techs.demand_power.constraints.resource: file=demand_2021_flat.csv:N1
