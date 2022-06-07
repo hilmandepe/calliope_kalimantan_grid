@@ -43,7 +43,7 @@ locations:
             wind_onshore:
                 constraints:
                     resource: file=wind_onshore_resource.csv:W6
-                    energy_cap_max: 101.0 # MW
+                    energy_cap_max: 1010.0 # MW
 
     W7:
         techs:
@@ -57,14 +57,14 @@ locations:
             wind_onshore:
                 constraints:
                     resource: file=wind_onshore_resource.csv:C1
-                    energy_cap_max: 59.0 # MW
+                    energy_cap_max: 590.0 # MW
 
     C2:
         techs:
             wind_onshore:
                 constraints:
                     resource: file=wind_onshore_resource.csv:C2
-                    energy_cap_max: 59.0 # MW
+                    energy_cap_max: 590.0 # MW
 
     C3:
         techs:
@@ -92,7 +92,7 @@ locations:
             wind_onshore:
                 constraints:
                     resource: file=wind_onshore_resource.csv:S1
-                    energy_cap_equals: 30.0 # MW
+                    energy_cap_max: 140.0 # MW
 
     S2:
         techs:
@@ -106,7 +106,7 @@ locations:
             wind_onshore:
                 constraints:
                     resource: file=wind_onshore_resource.csv:S3
-                    energy_cap_equals: 40.0 # MW
+                    energy_cap_max: 140.0 # MW
 
     E1:
         techs:

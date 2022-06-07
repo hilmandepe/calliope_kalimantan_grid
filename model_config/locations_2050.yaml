@@ -12,11 +12,10 @@ locations:
                     resource: file=demand_2050.csv:W1
             biomass:
                 constraints:
-                    energy_cap_max: 230.8 #MW
-                    energy_cap_min: 100.0 # MW
+                    energy_cap_max: 327.0 #MW
             coal:
                 constraints:
-                    energy_cap_equals: 350.0 #MW
+                    energy_cap_max: 0.0 #MW
             gas:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -44,13 +43,13 @@ locations:
                     resource: file=demand_2050.csv:W2
             biomass:
                 constraints:
-                    energy_cap_equals: 56.0 #MW
+                    energy_cap_max: 0.0 # MW
             coal:
                 constraints:
                     energy_cap_max: 0.0 #MW
             gas:
                 constraints:
-                    energy_cap_equals: 300.0 #MW
+                    energy_cap_max: 0.0 #MW
             geothermal:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -62,7 +61,7 @@ locations:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -76,28 +75,28 @@ locations:
                     resource: file=demand_2050.csv:W3
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: 327.0 # MW
             coal:
                 constraints:
                     energy_cap_max: 0.0 #MW
             gas:
                 constraints:
-                    energy_cap_equals: 300.0 #MW
+                    energy_cap_max: 0.0 #MW
             geothermal:
                 constraints:
                     energy_cap_max: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_equals: 12.97 #MW
+                    energy_cap_max: 12.97 #MW
             diesel:
                 constraints:
                     energy_cap_max: 0.0 #MW
             nuclear:
                 constraints:
-                    energy_cap_equals: 300.0 # MW
+                    energy_cap_max: 1400.0 # MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -111,7 +110,7 @@ locations:
                     resource: file=demand_2050.csv:W4
             biomass:
                 constraints:
-                    energy_cap_equals: 5.0 # MW
+                    energy_cap_max: 327.0 # MW
             coal:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -129,7 +128,7 @@ locations:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -154,13 +153,13 @@ locations:
                     energy_cap_max: 0.0 # MW
             hydro:
                 constraints:
-                    energy_cap_equals: 103.57 # MW
+                    energy_cap_max: 103.57 # MW
             diesel:
                 constraints:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -173,7 +172,7 @@ locations:
                     resource: file=demand_2050.csv:W6
             biomass:
                 constraints:
-                    energy_cap_equals: 11.0 # MW
+                    energy_cap_max: 327.0 # MW
             coal:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -185,13 +184,13 @@ locations:
                     energy_cap_max: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_equals: 0.3 #MW
+                    energy_cap_max: 0.3 #MW
             diesel:
                 constraints:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -216,14 +215,13 @@ locations:
                     energy_cap_max: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 339.77 # MW
-                    energy_cap_min: 17.4 # MW
+                    energy_cap_max: 4737.0 # MW
             diesel:
                 constraints:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -236,14 +234,13 @@ locations:
                     resource: file=demand_2050.csv:C1
             biomass:
                 constraints:
-                    energy_cap_max: 170.0 # MW
-                    energy_cap_min: 20.0 # MW
+                    energy_cap_max: 749.5 # MW
             coal:
                 constraints:
                     energy_cap_max: 0.0 #MW
             gas:
                 constraints:
-                    energy_cap_equals: 100.0 #MW
+                    energy_cap_max: 0.0 #MW
             geothermal:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -268,10 +265,10 @@ locations:
                     resource: file=demand_2050.csv:C2
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: 749.5 # MW
             coal:
                 constraints:
-                    energy_cap_equals: 50.0 #MW
+                    energy_cap_max: 0.0 #MW
             gas:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -286,7 +283,7 @@ locations:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -317,7 +314,7 @@ locations:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -348,7 +345,7 @@ locations:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -373,13 +370,13 @@ locations:
                     energy_cap_max: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_equals: 400.0 #MW
+                    energy_cap_max: 400.0 # MW
             diesel:
                 constraints:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -392,19 +389,19 @@ locations:
                     resource: file=demand_2050.csv:S1
             biomass:
                 constraints:
-                    energy_cap_max: 129.0 # MW
+                    energy_cap_max: 430.0 # MW
             coal:
                 constraints:
                     energy_cap_max: 0.0 #MW
             gas:
                 constraints:
-                    energy_cap_equals: 300.0 #MW
+                    energy_cap_max: 0.0 #MW
             geothermal:
                 constraints:
                     energy_cap_max: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_equals: 30.0 # MW
+                    energy_cap_max: 30.0 # MW
             diesel:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -423,7 +420,7 @@ locations:
                     resource: file=demand_2050.csv:S2
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: 430.0 # MW
             coal:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -441,7 +438,7 @@ locations:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -454,10 +451,10 @@ locations:
                     resource: file=demand_2050.csv:S3
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: 430.0 # MW
             coal:
                 constraints:
-                    energy_cap_equals: 200.0 #MW
+                    energy_cap_max: 200.0 #MW
             gas:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -472,7 +469,7 @@ locations:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -488,7 +485,7 @@ locations:
                     energy_cap_max: 0.0 # MW
             coal:
                 constraints:
-                    energy_cap_equals: 14.0 #MW
+                    energy_cap_max: 0.0 #MW
             gas:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -522,7 +519,7 @@ locations:
                     energy_cap_max: 0.0 #MW
             gas:
                 constraints:
-                    energy_cap_equals: 80.0 #MW
+                    energy_cap_max: 0.0 #MW
             geothermal:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -534,7 +531,7 @@ locations:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -559,13 +556,13 @@ locations:
                     energy_cap_max: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_equals: 90.0 #MW
+                    energy_cap_max: 90.0 # MW
             diesel:
                 constraints:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -590,14 +587,13 @@ locations:
                     energy_cap_max: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_max: 991.4 #MW
-                    energy_cap_min: 18.0 # MW
+                    energy_cap_max: 18.0 # MW
             diesel:
                 constraints:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -610,7 +606,7 @@ locations:
                     resource: file=demand_2050.csv:E5
             biomass:
                 constraints:
-                    energy_cap_equals: 0.0 # MW
+                    energy_cap_max: 0.0 # MW
             coal:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -622,13 +618,13 @@ locations:
                     energy_cap_max: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_equals: 155.0 #MW
+                    energy_cap_max: 155.0 #MW
             diesel:
                 constraints:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
@@ -647,13 +643,13 @@ locations:
                     energy_cap_max: 0.0 #MW
             gas:
                 constraints:
-                    energy_cap_equals: 80.0 #MW
+                    energy_cap_max: 0.0 #MW
             geothermal:
                 constraints:
                     energy_cap_max: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_equals: 90.24 # MW
+                    energy_cap_max: 90.24 # MW
             diesel:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -684,13 +680,13 @@ locations:
                     energy_cap_max: 0.0 #MW
             hydro:
                 constraints:
-                    energy_cap_equals: 300.0 # MW
+                    energy_cap_max: 21580.0 # MW
             diesel:
                 constraints:
                     energy_cap_max: 0.0 #MW
             battery:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: inf # MW
             pumped_hydro:
                 constraints:
                     energy_cap_max: 0.0 # MW
