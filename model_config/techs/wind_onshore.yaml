@@ -3,20 +3,20 @@ techs:
     wind_onshore:
         essentials:
             name: 'Onshore wind turbine'
-            color: '#6BA1D8'
+            color: '#B80000'
             parent: supply_plus
             carrier_out: power
         constraints:
             resource: file=wind_onshore_resource.csv
             resource_unit: energy_per_cap
-            energy_eff: 1
-            resource_area_max: inf
+            resource_eff: 1
+            energy_cap_max: inf
             lifetime: 27
         costs:
             monetary:
                 interest_rate: 0.04
-                energy_cap: 1500000.0 # USD per kWh
+                energy_cap: 2350000.0 # USD per kWh
                 om_annual: 60000.0 # USD/MW
                 om_prod: 0.0 # USD/MWh
             emission:
-                om_prod: 0.0 # kg CO2eq/kWh
+                om_prod: 0.0 # kgCO2eq/kWh

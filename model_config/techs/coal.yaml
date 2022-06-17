@@ -10,7 +10,6 @@ techs:
             resource: inf
             energy_eff: 0.38
             energy_cap_max: inf  # MW
-            energy_cap_min_use: 0.8
             energy_ramping: 0.00001 # per hour
             lifetime: 30
         costs:

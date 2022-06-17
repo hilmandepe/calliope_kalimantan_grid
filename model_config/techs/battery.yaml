@@ -3,7 +3,7 @@ techs:
     battery:
         essentials:
             name: 'Li-ion battery storage'
-            color: '#49666E'
+            color: '#FA5B16'
             parent: storage
             carrier: power
         constraints:

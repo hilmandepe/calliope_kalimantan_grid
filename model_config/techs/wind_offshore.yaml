@@ -3,14 +3,14 @@ techs:
     wind_offshore:
         essentials:
             name: 'Offshore wind turbine'
-            color: '#DB1C02'
+            color: '#038F73'
             parent: supply_plus
             carrier_out: power
         constraints:
             resource: file=wind_offhore_resource.csv
             resource_unit: energy_per_cap
-            energy_eff: 1
-            resource_area_max: inf
+            resource_eff: 1
+            energy_cap_max: inf
             lifetime: 27
         costs:
             monetary:

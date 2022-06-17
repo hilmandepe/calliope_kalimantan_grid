@@ -454,7 +454,7 @@ locations:
                     energy_cap_max: 430.0 # MW
             coal:
                 constraints:
-                    energy_cap_max: 200.0 #MW
+                    energy_cap_max: 0.0 #MW
             gas:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -513,7 +513,7 @@ locations:
                     resource: file=demand_2050.csv:E2
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: 482.0 # MW
             coal:
                 constraints:
                     energy_cap_max: 0.0 #MW
@@ -544,7 +544,7 @@ locations:
                     resource: file=demand_2050.csv:E3
             biomass:
                 constraints:
-                    energy_cap_max: 0.0 # MW
+                    energy_cap_max: 482.0 # MW
             coal:
                 constraints:
                     energy_cap_max: 0.0 #MW

@@ -15,7 +15,7 @@ techs:
         costs:
             monetary:
                 interest_rate: 0.04
-                energy_cap: 1190000.0 # USD/MW
+                energy_cap: 1250000.0 # USD/MW
                 om_annual: 15000.0 # USD/MW
                 om_prod: 0.0 # USD/MWh
             emission:

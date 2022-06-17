@@ -29,22 +29,22 @@ scenarios:
     scenario_12_2030: ["electricity_mix_2030", "dec2030", "minimize_cost_2030"]
     scenario_01_2030_emissions: ["jan2030", "electricity_cap_2030", "minimize_emissions",
                                  "cost_learning_2030"]
-    scenario_2050: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050"]
+    scenario_2050: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "fossil_var_2050"]
     scenario_2050_fossil: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "fossil_remain_2050"]
-    scenario_2050_nosub: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "fossil_remain_2050", "no_coal_subsidy"]
+    scenario_2050_nosub: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "fossil_var_2050", "no_coal_subsidy"]
     scenario_2050_nole: ["minimize_cost_2050", "low_resolution", "electricity_cap_2050", "no_coal_subsidy"]
-    scenario_2050_emissions: [ "minimize_emissions", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_coal_subsidy", "run_orno_coal"]
-    scenario_2050_emissions_nole: [ "minimize_emissions", "low_resolution", "electricity_cap_2050", "no_coal_subsidy"]
+    scenario_2050_emissions: [ "minimize_emissions", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "fossil_var_2050"]
+    scenario_2050_emissions_zero: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_fossil_2050"]
     scenario_01_2050: ["jan2050", "minimize_cost_2050", "cost_learning_2050", "electricity_cap_2050"]
     scenario_07_2050: ["jul2050", "minimize_cost_2050", "cost_learning_2050", "electricity_cap_2050"]
-    scenario_01_2050_emissions: ["jan2050", "minimize_emissions", "cost_learning_2050", "electricity_cap_2050"]
-    scenario_07_2050_emissions: ["jul2050", "minimize_emissions", "cost_learning_2050", "electricity_cap_2050"]
+    scenario_01_2050_emissions: ["jan2050", "minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_fossil_2050"]
+    scenario_07_2050_emissions: ["jul2050", "minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_fossil_2050"]
 
     scenario_01_2050_steep: ["jan2050", "minimize_cost_2050", "cost_learning_2050", "electricity_cap_2050", "steep_2050"]
     scenario_01_2050_flat: ["jan2050", "minimize_cost_2050", "cost_learning_2050", "electricity_cap_2050", "flat_2050"]
 
-    scenario_2050_steep: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "steep_2050"]
-    scenario_2050_flat: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "flat_2050"]
+    scenario_2050_steep: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_fossil_2050", "steep_2050"]
+    scenario_2050_flat: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_fossil_2050", "flat_2050"]
     scenario_2030_steep: ["electricity_mix_2030", "minimize_cost_2030", "low_resolution", "cost_learning_2030", "steep_2030"]
     scenario_2030_flat: ["electricity_mix_2030", "minimize_cost_2030", "low_resolution", "cost_learning_2030", "flat_2030"]
     scenario_2021_steep: ["minimize_cost_2021", "low_resolution", "steep_2021"]
@@ -55,8 +55,10 @@ scenarios:
 
     scenario_2050_half_biomass: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "half_biomass"]
     scenario_2050_half_hydro: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "half_hydro"]
-    scenario_2050_half_both: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "half_hydro", "half_biomass"]
+    scenario_2050_half_both: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_fossil_2050", "half_hydro", "half_biomass"]
     scenario_2050_half_both_ncs: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "half_hydro", "half_biomass", "no_coal_subsidy"]
+
+    scenario_VRE: ["minimize_cost_2050", "low_resolution", "cost_learning_2050", "electricity_cap_2050", "no_hydro", "no_biomass"]
 
 ##
 # Overrides are the building blocks from which scenarios can be defined
@@ -102,7 +104,7 @@ overrides:
                     power: 0.0700
 
     jan2021:
-        model.subset_time: ['2021-01-01', '2021-01-31']
+        model.subset_time: ['2021-01-01', '2021-01-07']
 
     feb2021:
         model.subset_time: ['2021-02-01', '2021-02-28']
@@ -138,7 +140,7 @@ overrides:
         model.subset_time: ['2021-12-01', '2021-12-31']
 
     jan2030:
-        model.subset_time: ['2030-01-01', '2030-01-31']
+        model.subset_time: ['2030-01-01', '2030-01-07']
 
     dec2030:
         model.subset_time: ['2030-12-01', '2030-12-31']
@@ -171,7 +173,7 @@ overrides:
 
     minimize_cost_2050:
         run:
-            ensure_feasibility: true
+            ensure_feasibility: false
             objective_options:
                 cost_class: { 'monetary': 1, 'emission': 0 }
                 sense: minimize
@@ -297,7 +299,7 @@ overrides:
                     power: 0.0
 
     no_coal_subsidy:
-        techs.coal.costs.monetary.om_con: 20.34
+        techs.coal.costs.monetary.om_con: 19.62 # USD/MWh - coal price 5.45 USD/GJ
 
     cost_learning_2030:
         techs.solar.costs.monetary.energy_cap: 560000.0
@@ -306,6 +308,17 @@ overrides:
         techs.wind_onshore.costs.monetary.om_annual: 51000.0
         techs.wind_offshore.costs.monetary.energy_cap: 2980000.0
         techs.wind_offshore.costs.monetary.om_annual: 61700.0
+
+        techs.biomass.costs.monetary.energy_cap: 1820000.0
+        techs.biomass.costs.monetary.om_annual: 43800.0
+        techs.coal.costs.monetary.energy_cap: 1360000.0
+        techs.coal.costs.monetary.om_annual: 40000.0
+        techs.diesel.costs.monetary.energy_cap: 800000.0
+        techs.diesel.costs.monetary.om_annual: 8000.0
+        techs.gas.costs.monetary.energy_cap: 1000000.0
+        techs.gas.costs.monetary.om_annual: 22800.0
+        techs.hydro.costs.monetary.energy_cap: 2000000.0
+        techs.hydro.costs.monetary.om_annual: 36200.0
 
     cost_learning_2050:
         techs.solar.costs.monetary.energy_cap: 410000.0
@@ -317,7 +330,7 @@ overrides:
 
         techs.biomass.costs.monetary.energy_cap: 1600000.0
         techs.biomass.costs.monetary.om_annual: 38100.0
-        techs.coal.costs.monetary.energy_cap: 990000.0
+        techs.coal.costs.monetary.energy_cap: 1320000.0
         techs.coal.costs.monetary.om_annual: 38700.0
         techs.diesel.costs.monetary.energy_cap: 780000.0
         techs.diesel.costs.monetary.om_annual: 7760.0
@@ -586,6 +599,17 @@ overrides:
         locations.E2.techs.gas.constraints.energy_cap_equals: 80.0
         locations.N1.techs.gas.constraints.energy_cap_equals: 80.0
 
+    fossil_var_2050:
+        locations.W1.techs.coal.constraints.energy_cap_max: 350.0
+        locations.W2.techs.gas.constraints.energy_cap_max: 300.0
+        locations.C1.techs.gas.constraints.energy_cap_max: 100.0
+        locations.C2.techs.coal.constraints.energy_cap_max: 50.0
+        locations.S1.techs.gas.constraints.energy_cap_max: 300.0
+        locations.S3.techs.coal.constraints.energy_cap_max: 200.0
+        locations.E1.techs.coal.constraints.energy_cap_max: 14.0
+        locations.E2.techs.gas.constraints.energy_cap_max: 80.0
+        locations.N1.techs.gas.constraints.energy_cap_max: 80.0
+
     half_biomass:
         locations.W1.techs.biomass.constraints.energy_cap_scale: 0.5
         locations.W2.techs.biomass.constraints.energy_cap_scale: 0.5
@@ -633,3 +657,62 @@ overrides:
         locations.E5.techs.hydro.constraints.energy_cap_scale: 0.5
         locations.N1.techs.hydro.constraints.energy_cap_scale: 0.5
         locations.N2.techs.hydro.constraints.energy_cap_scale: 0.5
+
+    no_hydro:
+        locations.W1.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.W2.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.W3.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.W4.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.W5.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.W6.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.W7.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.C1.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.C2.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.C3.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.C4.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.C5.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.S1.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.S2.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.S3.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.E1.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.E2.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.E3.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.E4.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.E5.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.N1.techs.hydro.constraints.energy_cap_equals: 0.0
+        locations.N2.techs.hydro.constraints.energy_cap_equals: 0.0
+
+    no_biomass:
+        locations.W1.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.W2.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.W3.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.W4.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.W5.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.W6.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.W7.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.C1.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.C2.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.C3.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.C4.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.C5.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.S1.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.S2.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.S3.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.E1.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.E2.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.E3.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.E4.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.E5.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.N1.techs.biomass.constraints.energy_cap_equals: 0.0
+        locations.N2.techs.biomass.constraints.energy_cap_equals: 0.0
+
+    no_fossil_2050:
+        locations.W1.techs.coal.constraints.energy_cap_equals: 0.0
+        locations.W2.techs.gas.constraints.energy_cap_equals: 0.0
+        locations.C1.techs.gas.constraints.energy_cap_equals: 0.0
+        locations.C2.techs.coal.constraints.energy_cap_equals: 0.0
+        locations.S1.techs.gas.constraints.energy_cap_equals: 0.0
+        locations.S3.techs.coal.constraints.energy_cap_equals: 0.0
+        locations.E1.techs.coal.constraints.energy_cap_equals: 0.0
+        locations.E2.techs.gas.constraints.energy_cap_equals: 0.0
+        locations.N1.techs.gas.constraints.energy_cap_equals: 0.0

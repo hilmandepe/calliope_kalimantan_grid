@@ -237,7 +237,7 @@ locations:
                     energy_cap_equals: 0.0 #MW
             gas:
                 constraints:
-                    energy_cap_equals: 0.0 #MW
+                    energy_cap_equals: 100.0 #MW
             geothermal:
                 constraints:
                     energy_cap_equals: 0.0 #MW
